@@ -420,6 +420,21 @@ input:-webkit-autofill {
 	font-size:13px;
 	line-height:20px
 }
+/*底部*/
+
+#copyright{width:100%;float:left;text-align:center;padding:15px 0;line-height:25px;border-top:1px solid #d7d7d7;}
+
+#copy_txt{width:100%;float:left;}
+
+#footnav{width:100%;float:left;}
+
+#footnav ul{margin:0px;padding:0px;list-style-type:none;}
+
+#footnav li{margin:0px;padding:0px;list-style-type:none; display:inline;}
+
+#footnav li a{margin:0 5px;}
+
+/*end*/
 .friendlink a,.friendlink span {
 	color:#34364b;
 	opacity:.7;
@@ -1775,7 +1790,7 @@ body {
 .full-inside-subnav .crumb {
 	position:relative;
 	float:right;
-	max-width:27%;
+	max-width:34%;
 	padding-left:28px;
 	display:block;
 	color:#737373;
@@ -2026,7 +2041,8 @@ body {
 }
 .product-list li img {
 	display:block;
-	margin:0 auto
+	margin: 0 auto;
+	height: 150px;
 }
 .product-list li .pro-img {
 	background-color:#eaebf5
@@ -3624,6 +3640,15 @@ body {
 .Pledge-min h4 {
 	line-height:30px
 }
+.pagess {clear: both;margin: 20px;overflow: hidden;margin-left: 0px;text-align: center;font-size:12px}
+.pagess ul li { display:inline-block;border: 1px solid #ccc;padding: 2px 9px;margin: 0 3px;line-height: 20px;background: #fff;color:#999}
+.pagess ul li:hover{ background:#ccc; color:#fff;border: 1px solid #ccc}
+.pagess ul li:hover a{color:#fff;}
+.pagess ul li.thisclass {display: inline-block;border: 1px solid #ccc;padding: 2px 9px;margin: 0 3px;background: #ccc;color: #fff;}
+.pagess ul li.thisclass a {color: #fff;}
+.pagess ul li a{ display:block;color:#999}
+.pagess ul li a:hover {color: #fff;}
+
 }.Download-list ul {
 	padding-bottom:20px
 }
