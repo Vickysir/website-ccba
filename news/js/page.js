@@ -9,8 +9,8 @@ function initailPages(pageNo, totalPage, name) {
   replaceParentNode.replaceChild(spanNode, replaceNode);
   replaceParentNode.setAttribute('class', 'thisclass');
 
-  pageParentNode.querySelector('#prePage').setAttribute('href',`/${name}/?${pageNo-1}`);
-  pageParentNode.querySelector('#nextPage').setAttribute('href',`/${name}/?${pageNo + 1}`);
+  pageParentNode.querySelector('#prePage').setAttribute('href',`/${name}?${pageNo-1}`);
+  pageParentNode.querySelector('#nextPage').setAttribute('href',`/${name}?${pageNo + 1}`);
 
   if (pageNo == 1) {
     pageParentNode.removeChild(pageParentNode.querySelector('#firstPage').parentNode);

@@ -24,7 +24,7 @@ function writeLinkNode(id, nodeIdString, imgData) {
 
 function changeSubNavTitle() {}
 
-function detaiMain(imgData) {
+function detailMain(imgData) {
   const data = getPageDataById(id, imgData);
   if (data) {
     document.querySelector('#enterprises-articleInfo').innerHTML = data.content || data.title;

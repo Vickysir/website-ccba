@@ -85,11 +85,8 @@
         <li><a href="/news/?1" id="page1">1</a></li>
         <li><a href="/news/?2" id="page2">2</a></li>
         <li><a href="/news/?3" id="page3">3</a></li>
-        <li><a href="/news/?4" id="page4">4</a></li>
-        <li><a href="/news/?5" id="page5">5</a></li>
-        <li><a href="/news/?6" id="page6">6</a></li>
         <li><a href="/news/?" id="nextPage">下一页</a></li>
-        <li><a href="/news/?6" class="c-nav ease moye" id="tailPage">尾页</a></li>
+        <li><a href="/news/?3" class="c-nav ease moye" id="tailPage">尾页</a></li>
       </ul>
     </div>
   </div>
@@ -104,9 +101,9 @@
     $("#head").load("../head.html");
     $("#news-subnav").load("./subnav.html");
     $("#foot").load("../foot.html");
-    renderItems(shdtData, 9)
+    renderItems(allDataForNews, 9)
     const pageNo = getPgaeNo();
-    initailPages(pageNo, 6, 'news')
+    initailPages(pageNo, 3, 'news')
   </script>
   <script type="text/javascript" src="/ECMS_DGSJ/js/scrollbar.js"></script>
   <script type="text/javascript" src="/ECMS_DGSJ/js/jquery.countup.min.js"></script>

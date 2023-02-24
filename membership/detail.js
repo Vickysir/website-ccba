@@ -24,7 +24,7 @@ function writeLinkNode(id, nodeIdString, data) {
 
 function changeSubNavTitle() {}
 
-function detaiMain(sourceData) {
+function detailMain(sourceData) {
   const data = getPageDataById(id, sourceData);
   if (data) {
     document.querySelector('#membership-articleInfo').innerHTML = data.job || data.name;
