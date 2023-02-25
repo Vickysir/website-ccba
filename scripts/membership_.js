@@ -22,6 +22,5 @@ function parseData(page) {
     }
     goodsList.push(obj)
   })
-  console.log(goodsList)
   fs.writeFile('./goods_list.json', JSON.stringify(goodsList), () => console.log('写入完成'))
 }

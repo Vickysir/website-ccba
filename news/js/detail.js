@@ -85,8 +85,8 @@ function renderNewsDetail(data) {
     document.querySelector('head > title').innerHTML = matchData.title;
     document.querySelector('#news-detail-title').innerHTML = matchData.title;
     document.querySelector('#news-detail-time').innerHTML = matchData.time;
-    document.querySelector('#news-detail-subtitle').href = `/news/detail.html?${matchData.id}`;
-    document.querySelector('#news-detail-subtitle').innerHTML = matchData.title.length > 16 ? matchData.title.slice(0, 15) + '...' : matchData.title;
+    // document.querySelector('#news-detail-subtitle').href = `/news/detail.html?${matchData.id}`;
+    // document.querySelector('#news-detail-subtitle').innerHTML = matchData.title.length > 16 ? matchData.title.slice(0, 15) + '...' : matchData.title;
     writeLinkNode(data)
   }
 }

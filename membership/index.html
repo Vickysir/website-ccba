@@ -11,6 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
     <title>商会成员 - 爱尔兰科克华人商会</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
@@ -28,7 +29,8 @@
           const templatElem = document.getElementById('membershipCardTemplate');
           const content = templatElem.content.cloneNode(true);
           content.querySelector('a').href = this.getAttribute(`${prefix}href`);
-          content.querySelector('a').textContent = this.getAttribute(`${prefix}name`);
+          content.querySelector('a > .membership-name').textContent = this.getAttribute(`${prefix}name`);
+          content.querySelector('a > .membership-job').textContent = this.getAttribute(`${prefix}job`);
           content.querySelector('a').alt = this.getAttribute(`${prefix}name`);
           content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
           this.appendChild(content); 
@@ -51,7 +53,7 @@
     <a href="javascript:;" class="exit-off-canvas"></a>
     <div class="inside-banner ">
       <img src="/ECMS_DGSJ/images/1569491368.jpg" /></div>
-    <div class="full-inside-subnav">
+    <!-- <div class="full-inside-subnav">
       <div class="commonweb clearfix">
         <div class="inside-subnav">
           <h3 class="channel-title">商会成员</h3>
@@ -61,7 +63,7 @@
             <a href="/">首页</a>&nbsp;>&nbsp;<a href="/about/">商会成员</a></div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="common-clumb-min commonweb clearfix">
       <div class="clumb-title">
         <h3 class="cn font22">商会成员</h3></div>
@@ -70,9 +72,12 @@
       <div class="Pledetext">
         <div class="articleList" style="width:100%; float:left;margin-bottom: 40px;">
           <template id="membershipCardTemplate">
-            <li style="margin:0px;padding:0 0 0 10px;list-style-type:none;border-bottom:1px dotted #ccc;background:url(../ECMS_DGSJ/images/li_1.jpg) no-repeat left center;line-height:28px;">
+            <li style="margin:0px;padding:0 0 0 10px;list-style-type:none;border-bottom:1px dotted #ccc;background:url(../ECMS_DGSJ/images/li_1.jpg) no-repeat left center;line-height:50px; font-size: medium;">
               <span style="color: #959595;float: right;"></span>
-              <a href="/a/huiyuanqiye/2019/1119/108.html" alt=""></a>
+              <a href="/a/huiyuanqiye/2019/1119/108.html" alt="">
+                <span class="membership-name" style="width: 100px; display: inline-block;"></span>
+                <span class="membership-job"></span>
+              </a>
             </li>
           </template>
           <ul style="margin:0px;padding:0px;list-style-type:none;">
@@ -113,7 +118,8 @@
         const parentNode = document.querySelector('.articleList');
         membershipData.slice(start, end).forEach(item => {
           let liNode = document.createElement("membership-item");
-          liNode.setAttribute('data-name', `${item.name} ${item.job}`);
+          liNode.setAttribute('data-name', item.name);
+          liNode.setAttribute('data-job', item.job);
           liNode.setAttribute('data-time', item.time);
           liNode.setAttribute('data-href', `/membership/detail.html?${item.id}`);
           parentNode.querySelector('ul').appendChild(liNode);

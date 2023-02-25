@@ -52,12 +52,19 @@ function renderItems(data) {
 
 function renderEnterprisesItem(data) {
   const parentNode = document.querySelector('.arrivalsp-min > ul');
-  data.forEach(item => {
+  data.forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
-    liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
+    // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
+    liNode.setAttribute('data-href', 'javascrit:;');
     liNode.setAttribute('data-src', item.url);
-    liNode.setAttribute('class', "swiper-slide wow")
+    if (index == 0 || index == 2) {
+      liNode.setAttribute('class', "swiper-slide wow fadeInUp")
+    } else if(index == 1) {
+      liNode.setAttribute('class', "swiper-slide wow fadeInDown")
+    } else {
+      liNode.setAttribute('class', "swiper-slide")
+    }
     parentNode.appendChild(liNode);
   });
 }

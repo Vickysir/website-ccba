@@ -842,7 +842,7 @@
 
  @media(min-width:1024px) {
    body {
-     padding-top: 100px
+     padding-top: 90px
    }
  }
 
@@ -945,7 +945,7 @@
 
  .header-nav li h3 a {
    display: block;
-   padding: 10px 0
+   padding: 10px 0;
  }
 
  .header-nav li.cur .phsearchicon:after {
@@ -980,7 +980,7 @@
 
  .header-nav {
    position: fixed;
-   top: 55px;
+   top: 70px;
    width: 100%;
    left: 0;
    height: 100%;
@@ -988,7 +988,7 @@
    padding: 0;
    display: none;
    overflow-y: scroll;
-   padding-bottom: 190px
+   /* padding-bottom: 190px */
  }
 
  .phsearchicon:after {
@@ -1011,7 +1011,7 @@
 
  .header-right {
    float: right;
-   padding: 16px 0 0;
+   padding: 30px 0 0;
    font-size: 0
  }
 
@@ -1157,6 +1157,10 @@
    display: none
  }
 
+ .switch-language {
+    display: none;
+  }
+
  .headlanguage {
    font-size: 0;
    padding: 20px;
@@ -1225,15 +1229,15 @@
  }
 
  @media(max-width:375px) {
-   .logo img {
+   /* .logo img {
      height: 19px
-   }
+   } */
  }
 
  @media(min-width:1024px) {
    header {
      background: #fff;
-     height: 100px
+     height: 90px
    }
 
    .headerweb {
@@ -1267,21 +1271,22 @@
    }
 
    .logo {
-     padding: 32px 0 0
+     padding: 10px 0;
    }
 
    .logo img {
      display: block;
-     height: 60px
+     height: 70px
    }
 
    .header-nav li h3 {
-     font-size: 14px
+     font-size: large
    }
 
    .header-nav li h3 a {
      display: block;
-     padding: 38px 0
+     padding: 34px 10px 20px;
+     height: 90px;
    }
 
    .header-nav li h3 a:after {
@@ -1306,6 +1311,30 @@
      transition-timing-function: ease-out;
      -webkit-transition-timing-function: ease-out
    }
+
+   .switch-language:after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 51%;
+    right: 51%;
+    z-index: -1;
+    background-color: #d82019;
+    -o-transition-property: left, right;
+    -moz-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-property: left, right;
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out
+  }
+
 
    .header-nav li:hover h3 a,
    .header-nav li.cur h3 a {
@@ -1430,6 +1459,30 @@
      padding: 0 27px
    }
 
+   .switch-language {
+    /* display: flex; */
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100px;
+    cursor: pointer;
+    font-size: large;
+    text-align: center;
+    float: right;
+    padding: 34px 0px 20px;
+    margin: 0 20px;
+    height: 90px;
+   }
+   .switch-language a {
+   }
+   .switch-language:hover {
+     /* border-bottom: 3px solid #d82019; */
+   }
+   .switch-language a:hover {
+    font-weight: 700;
+     color: #d82019;
+   }
+
    .pcnavmenubtn {
      border-left: 1px solid #eaeaea;
      display: block;
@@ -1437,7 +1490,7 @@
      right: 0;
      top: 0;
      width: 75px;
-     height: 100px;
+     height: 90px;
      cursor: pointer
    }
 
@@ -1535,7 +1588,7 @@
 
  @media(min-width:1366px) {
    .logo {
-     padding: 20px 0 0 55px
+     padding: 12px 0 0 55px
    }
 
    .header-nav li {
@@ -1562,7 +1615,7 @@
    }
 
    .header-nav {
-     padding-left: 237px
+     padding-left: 400px
    }
  }
 
@@ -2085,6 +2138,33 @@
  .full-inside-subnav .subnav a.cur {
    color: #d82019
  }
+
+ /* 二级、三级菜单 */
+.menu {background: #eee}
+.menu ul {}
+.menu ul li {float: left;padding: 1.4% 2.5%;box-sizing: border-box;border-top: 2px solid #eee;transition: all 0.3s ease 0s}
+.menu ul li a { font-size: 16px;color: #666;display: block;}
+.menu ul li:hover,.menu ul li.current {border-top: 2px solid #e60012;background: #fff}
+.menu ul li:hover a,.menu ul li.current a{color: #e60012}
+.menu_sj{display: none}
+@media (max-width:750px ){
+	.menu{display: none}
+	
+	.menu_sj{height: 38px;position: relative;display: block;z-index: 10}
+	.menu_sj.fixed{position: fixed;left: 0;right: 0;top: 0;z-index: 99;background: #fff}
+	.menu_sj_sj{width: 15%;float: left;height: 38px}
+	.menu_sj_sj span{display: block;width: 100%;height: 38px;background: #e60012 url(../images/ico_35.png) no-repeat center center;background-size:auto 50%}
+	.menu_sj_sj dl{position: absolute;left: 0;right: 0;top: 38px;background: #e60012;display: none;z-index: 30}
+	.menu_sj_sj dl dt{height: 38px;line-height: 38px;border-bottom: 1px solid #aaa;padding: 0 5%}
+	.menu_sj_sj dl dt a{color: #fff;font-size: 14px;display: block;background: url(../images/ico_38.png) no-repeat right center;background-size: auto 35%}
+	
+	.menu_current{width: 85%;float: right;height: 38px;position: relative;background:#EEEEEE;width:100%;}
+	.menu_current h4{height: 38px;line-height: 38px;padding:0 5%;color: #e60012;font-size: 14px;font-weight: normal;background: url(../images/ico_36.png) no-repeat 95% center;background-size: auto 45%}
+	.menu_current ul{position: absolute;left: 0;right: 0;background: #fff;display: none;z-index: 40}
+	.menu_current ul li{height: 38px;line-height: 38px;border-bottom: 1px solid #aaa;padding: 0 5%}
+	.menu_current ul li a{color: #999;font-size: 14px;display: block;background: url(../images/ico_37.png) no-repeat right center;background-size: auto 35%}
+
+}
 
  .common-clumb {
    font-size: 0;
@@ -7486,6 +7566,10 @@
      line-height: 60px;
      padding: 0 46px
    }
+   .indxAboutus .index-more a {
+    height: 42px;
+    line-height: 42px;
+  }
 
    .index-more a:before {
      content: "";
@@ -7566,6 +7650,7 @@
 
  .inxnews-list li a {
    display: block;
+   background-color: #fff;
    border: 1px solid #e3e3eb
  }
 
@@ -7699,7 +7784,8 @@
 
  .indxAboutus .par-content p {
    color: #34364b;
-   opacity: .8
+   opacity: .8;
+   line-height: 26px;
  }
 
  @media(min-width:1024px) {
@@ -7727,7 +7813,7 @@
    }
 
    .indxAboutus .par-content h2 {
-     padding: 0 0 10px
+     padding: 0 0 26px
    }
  }
 
@@ -7795,6 +7881,10 @@
    text-transform: uppercase
  }
 
+ .indxProduct {
+  /* background-color: #f1f4f9 */
+ }
+
  @media(min-width:1024px) {
    .indxProduct {
      padding-top: 57px
@@ -7849,8 +7939,8 @@
    }
  }
 
- .indxArrivals {
-   background-color: #f1f4f9
+ .indxNewsmin {
+  background-color: #f1f4f9
  }
 
  .arrivals-wrapper {
@@ -7860,7 +7950,7 @@
 
  .arrivals-wrapper .arrivalsp-min {
    overflow: hidden;
-   padding: 30px 0 0
+   padding: 0px 0 0
  }
 
  .arrivals-wrapper ul.momargin {
@@ -7888,10 +7978,12 @@
 
  .arrivals-wrapper li .solut-text {
    padding: 10px;
-   background-color: #fff;
+   border: 1px solid #e3e3eb;
    border-top: 2px solid #d82019;
    text-align: center;
-   position: relative
+   position: relative;
+   font-size: large;
+   font-weight: 500;
  }
 
  .arrivals-wrapper li .solut-text:before {
@@ -7930,6 +8022,67 @@
    right: 0;
    z-index: 2
  }
+ .indxArrivals .enterprises-tab {
+  margin-top: 36px;
+ }
+
+ .indxArrivals .enterprises-tab ul {
+  display: flex;
+  justify-content: space-around;
+ }
+ /* .indxArrivals .enterprises-tab a {
+  height: 40px;
+  line-height: 40px;
+ } */
+
+/* .indxArrivals .enterprises-tab ul.momargin {
+  margin: 0
+}
+
+.indxArrivals .enterprises-tab ul.momargin li {
+  padding: 0
+} */
+
+.indxArrivals .enterprises-tab li {
+  margin: 0 20px 16px;
+  width: 100px;
+  width: 33%;
+  position: relative;
+  text-align: center;
+  background-color: #d82019;
+  border-radius: 5px;
+  padding: 6px 20px;
+}
+
+
+.indxArrivals .enterprises-tab li a {
+  display: block;
+  color: #fff;
+}
+
+.indxArrivals .enterprises-tab li div {
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.5s linear;
+  background-color: #d82019;
+  text-align: center;
+}
+
+.indxArrivals .enterprises-tab li:hover div {
+  background-color: #333;
+}
+
+.indxArrivals .enterprises-tab a:hover,
+.indxArrivals .enterprises-tab a:after {
+  display: block;
+  font-weight: 700;
+  /* color: #d82019; */
+}
+
+
 
  @media(min-width:768px) {
    .arrivals-wrapper .relat-btn {
@@ -7938,7 +8091,7 @@
 
    .arrivals-wrapper li {
      float: left;
-     width: 33.33%
+     width: 33.33%;
    }
  }
 
@@ -7975,7 +8128,7 @@
    }
 
    .arrivals-wrapper li .solut-text {
-     padding: 34px 30px 30px
+     padding: 30px 30px 20px
    }
 
    .arrivals-wrapper li .solut-text h3 {
@@ -8673,7 +8826,7 @@
    }
 
    .header-nav .sub-nav {
-     top: 100px;
+     top: 90px;
      background-color: #fff;
      position: absolute;
      width: 210px;

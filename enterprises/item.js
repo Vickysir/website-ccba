@@ -32,7 +32,9 @@ function renderItem(data, step) {
       'data-title': img.title,
     });
     liNode.setAttribute('data-title', img.title);
-    liNode.setAttribute('data-href', `/enterprises/detail.html?${img.id}`);
+    // liNode.setAttribute('data-href', `/enterprises/detail.html?${img.id}`);
+    // 禁用跳转
+    liNode.setAttribute('data-href', 'javascript:;');
     liNode.setAttribute('data-src', img.url);
     parentNode.appendChild(liNode);
   });
@@ -61,5 +63,15 @@ function initailPages(name, totalPage) {
   if (pageno == totalPage) {
     pageParentNode.removeChild(pageParentNode.querySelector('#nextPage').parentNode);
     pageParentNode.removeChild(pageParentNode.querySelector('#tailPage').parentNode);
+  }
+}
+
+function addAboutSubnavClassName(map) {
+  const pathname = window.location.pathname.split('/');
+  if (!!pathname[2]) {
+    const name = pathname[2].split('.html')[0];
+    const lisHTMLCollection = document.querySelector('#news-subnav').getElementsByTagName('li');
+    const curNode = lisHTMLCollection.item(map.get(name));
+    curNode.setAttribute('class', 'current')
   }
 }

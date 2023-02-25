@@ -251,3 +251,10 @@ const newsData = [
 ];
 
 const allDataForNews = [...shdtData, ...announcementData, ...newsData]
+
+
+const newsSubNavMap = new Map([
+  ['shdt', 0],
+  ['announcement', 1],
+  ['news', 2],
+]);

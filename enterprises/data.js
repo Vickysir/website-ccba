@@ -407,3 +407,11 @@ const otherData = [
 ];
 
 const allEnterprisesData = [...restaurantEnterprisesData, ...hotelEnterprisesData, ...otherData]
+
+
+
+const enterprisesSubNavMap = new Map([
+  ['restaurant', 0],
+  ['hotel', 1],
+  ['other', 2],
+]);
