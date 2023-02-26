@@ -128,8 +128,8 @@
             <li><a href="/membership/" id="firstPage">首页</a></li>
             <li><a href="/membership/?" id="prePage">上一页</a></li>
             <li><a href="./index.html?1" id="page1">1</a></li>
-            <li><a href="/membership/?2" id="page2">2</a></li>
-            <li><a href="/membership/?3" id="page3">3</a></li>
+            <li><a href="./index.html?2" id="page2">2</a></li>
+            <li><a href="./index.html?3" id="page3">3</a></li>
             <li><a href="/membership/?" id="nextPage">下一页</a></li>
             <li>
               <a href="/membership/?3" class="c-nav ease moye" id="tailPage"
@@ -164,10 +164,10 @@
           liNode.setAttribute('data-name', item.name);
           liNode.setAttribute('data-job', item.job);
           liNode.setAttribute('data-time', item.time);
-          liNode.setAttribute(
-            'data-href',
-            `/membership/detail.html?${item.id}`
-          );
+          // liNode.setAttribute(
+          //   'data-href',
+          //   `/membership/detail.html?${item.id}`
+          // );
           parentNode.querySelector('ul').appendChild(liNode);
         });
       }
