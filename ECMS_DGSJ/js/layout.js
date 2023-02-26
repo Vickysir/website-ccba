@@ -4,6 +4,25 @@ $(function () {
   var backtop = $("a.zdsbacktop");
   var wint = $(window).scrollTop();
 
+  var language = localStorage.getItem('language');
+  if (language == 'EN') {
+    $(".switch-language a").eq(1).addClass("language-red");
+  } else {
+    $(".switch-language a").eq(0).addClass("language-red");
+  }
+
+  $('.switch-language a').eq(0).on('click', function () {
+    $(".switch-language a").eq(1).removeClass("language-red");
+    $(".switch-language a").eq(0).addClass("language-red");
+    localStorage.setItem('language', 'CN');
+  });
+
+  $('.switch-language a').eq(1).on('click', function () {
+    $(".switch-language a").eq(0).removeClass("language-red");
+    $(".switch-language a").eq(1).addClass("language-red");
+    localStorage.setItem('language', 'EN');
+  });
+
   $(window).on('scroll', function () {
     wint = $(window).scrollTop();
     if (wint <= 400) { backtop.fadeOut(300); };

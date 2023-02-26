@@ -2,7 +2,7 @@ const restaurantEnterprisesData = [
   {
     id: 6,
     title: 'Wabisabi Sushi and Noodles Bar',
-    url: '../uploads/allimg/201110/1-201110200F90-L.jpg',
+    url: './uploads/allimg/201110/1-201110200F90-L.jpg',
     link: 'http://www.ccba.ie/a/team/184.html',
     content: '+353214279884',
   },

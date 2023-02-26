@@ -322,6 +322,10 @@
    width: 41.66666667%
  }
 
+ .articleInfo {
+  font-size: 16px;
+ }
+
  @media(max-width:320px) {
    body {
      min-width: 320px
@@ -1159,6 +1163,11 @@
 
  .switch-language {
     display: none;
+  }
+
+  .switch-language .language-red {
+     color: #d82019;
+     font-weight: 700;
   }
 
  .headlanguage {
