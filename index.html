@@ -74,8 +74,8 @@
     <!--banner-->
     <div class="indxProduct commonweb padtb">
       <div class="index-text center wow fadeInDown">
-        <h2 class="cn font30">公司文化</h2>
-        <h3 class="en font24">CORPORATE CULTURE</h3>
+        <h2 class="cn font30">商会文化</h2>
+        <h3 class="en font24">CHAMBER OF COMMERCE CULTURE</h3>
       </div>
       <div class="inxprod-list padtb">
         <ul class="clearfix">
@@ -202,7 +202,7 @@
           <h3 class="en font24">NEWS CENTER</h3>
         </div>
         <div class="indxNews-wraper">
-          <div class="inxnews-list">
+          <div class="inxnews-list" id="inxnews-list1">
             <template id="home-news-item">
               <li class="swiper-slide wow" style="width: 100%;">
                 <a
@@ -224,8 +224,11 @@
             </template>
             <ul class="clearfix swiper-wrapper"></ul>
           </div>
-          <a href="javascript:;" class="index-btn index-prev"></a>
-          <a href="javascript:;" class="index-btn index-next"></a>
+          <div class="inxnews-list" id="inxnews-list2" style="margin-top: 20px;">
+            <ul class="clearfix swiper-wrapper"></ul>
+          </div>
+          <!-- <a href="javascript:;" class="index-btn index-prev"></a>
+          <a href="javascript:;" class="index-btn index-next"></a> -->
         </div>
         <div class="index-more center wow fadeInUp">
           <a href="/news/">了解更多</a>
@@ -267,7 +270,7 @@
     <script>
       $('#head').load('head-home.html');
       $('#foot').load('foot.html');
-      renderItems(shdtData);
+      renderItems(allDataForNews);
       renderEnterprisesItem(allEnterprisesData);
       renderPartnerItem(partnerData);
     </script>
