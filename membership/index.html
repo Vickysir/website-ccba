@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-  
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="Pragma" content="no-cache">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Pragma" content="no-cache" />
     <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
     <title>商会成员 - 爱尔兰科克华人商会</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/aswiper.min.css" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/layout.css" />
-    <script type="text/javascript" src="/ECMS_DGSJ/js/jquery-1.12.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/aswiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"
+    ></script>
     <script>
       const prefix = 'data-';
       class Item extends HTMLElement {
@@ -29,17 +42,21 @@
           const templatElem = document.getElementById('membershipCardTemplate');
           const content = templatElem.content.cloneNode(true);
           content.querySelector('a').href = this.getAttribute(`${prefix}href`);
-          content.querySelector('a > .membership-name').textContent = this.getAttribute(`${prefix}name`);
-          content.querySelector('a > .membership-job').textContent = this.getAttribute(`${prefix}job`);
+          content.querySelector('a > .membership-name').textContent =
+            this.getAttribute(`${prefix}name`);
+          content.querySelector('a > .membership-job').textContent =
+            this.getAttribute(`${prefix}job`);
           content.querySelector('a').alt = this.getAttribute(`${prefix}name`);
-          content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
-          this.appendChild(content); 
+          content.querySelector('span').textContent = this.getAttribute(
+            `${prefix}time`
+          );
+          this.appendChild(content);
         }
       }
       window.customElements.define('membership-item', Item);
     </script>
   </head>
-  
+
   <body>
     <!--头部开始-->
     <header id="head"></header>
@@ -47,12 +64,17 @@
     <div class="headsideNav">
       <a href="javascript:;" class="slide-colse"></a>
       <a>
-        <img src="/ECMS_DGSJ/images/logo.png" alt="爱尔兰科克华人商会" title="爱尔兰科克华人商会" /></a>
+        <img
+          src="../ECMS_DGSJ/images/logo.png"
+          alt="爱尔兰科克华人商会"
+          title="爱尔兰科克华人商会"
+      /></a>
       <div class="slide-nav"></div>
     </div>
     <a href="javascript:;" class="exit-off-canvas"></a>
-    <div class="inside-banner ">
-      <img src="/ECMS_DGSJ/images/1569491368.jpg" /></div>
+    <div class="inside-banner">
+      <img src="../ECMS_DGSJ/images/1569491368.jpg" />
+    </div>
     <!-- <div class="full-inside-subnav">
       <div class="commonweb clearfix">
         <div class="inside-subnav">
@@ -66,33 +88,54 @@
     </div> -->
     <div class="common-clumb-min commonweb clearfix">
       <div class="clumb-title">
-        <h3 class="cn font22">商会成员</h3></div>
+        <h3 class="cn font22">商会成员</h3>
+      </div>
     </div>
     <div class="Pledge-min commonweb padtb">
       <div class="Pledetext">
-        <div class="articleList" style="width:100%; float:left;margin-bottom: 40px;">
+        <div
+          class="articleList"
+          style="width: 100%; float: left; margin-bottom: 40px"
+        >
           <template id="membershipCardTemplate">
-            <li style="margin:0px;padding:0 0 0 10px;list-style-type:none;border-bottom:1px dotted #ccc;background:url(../ECMS_DGSJ/images/li_1.jpg) no-repeat left center;line-height:50px; font-size: medium;">
-              <span style="color: #959595;float: right;"></span>
-              <a href="/a/huiyuanqiye/2019/1119/108.html" alt="">
-                <span class="membership-name" style="width: 100px; display: inline-block;"></span>
+            <li
+              style="
+                margin: 0px;
+                padding: 0 0 0 10px;
+                list-style-type: none;
+                border-bottom: 1px dotted #ccc;
+                background: url(../ECMS_DGSJ/images/li_1.jpg) no-repeat left
+                  center;
+                line-height: 50px;
+                font-size: medium;
+              "
+            >
+              <span style="color: #959595; float: right"></span>
+              <a alt="">
+                <span
+                  class="membership-name"
+                  style="width: 100px; display: inline-block"
+                ></span>
                 <span class="membership-job"></span>
               </a>
             </li>
           </template>
-          <ul style="margin:0px;padding:0px;list-style-type:none;">
-          </ul>
+          <ul style="margin: 0px; padding: 0px; list-style-type: none"></ul>
         </div>
         <div class="blank clear"></div>
         <div class="pages">
           <ul>
             <li><a href="/membership/" id="firstPage">首页</a></li>
             <li><a href="/membership/?" id="prePage">上一页</a></li>
-            <li><a href="/membership/?" id="page1">1</a></li>
+            <li><a href="./index.html?1" id="page1">1</a></li>
             <li><a href="/membership/?2" id="page2">2</a></li>
             <li><a href="/membership/?3" id="page3">3</a></li>
             <li><a href="/membership/?" id="nextPage">下一页</a></li>
-            <li><a href="/membership/?3" class="c-nav ease moye" id="tailPage">尾页</a></li>
+            <li>
+              <a href="/membership/?3" class="c-nav ease moye" id="tailPage"
+                >尾页</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -102,8 +145,8 @@
     <!--底部结束-->
     <a class="zdsbacktop" href="javascript:"></a>
     <script>
-      $("#head").load("../head.html");
-      $("#foot").load("../foot.html");
+      $('#head').load('../head.html');
+      $('#foot').load('../foot.html');
     </script>
     <script type="text/javascript" src="membership.js"></script>
     <script>
@@ -116,35 +159,51 @@
           end = pageNo * 20;
         }
         const parentNode = document.querySelector('.articleList');
-        membershipData.slice(start, end).forEach(item => {
-          let liNode = document.createElement("membership-item");
+        membershipData.slice(start, end).forEach((item) => {
+          let liNode = document.createElement('membership-item');
           liNode.setAttribute('data-name', item.name);
           liNode.setAttribute('data-job', item.job);
           liNode.setAttribute('data-time', item.time);
-          liNode.setAttribute('data-href', `/membership/detail.html?${item.id}`);
+          liNode.setAttribute(
+            'data-href',
+            `/membership/detail.html?${item.id}`
+          );
           parentNode.querySelector('ul').appendChild(liNode);
         });
-      };
+      }
       loadItem();
     </script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/scrollbar.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/jquery.countup.min.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/swiper.jquery.min.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/wow.min.js"></script>
-    <script>var wow = new WOW({
+    <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery.countup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/swiper.jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/wow.min.js"></script>
+    <script>
+      var wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
         offset: 0,
         mobile: true,
-        live: true
+        live: true,
       });
-      wow.init();</script>
-    <script src="/ECMS_DGSJ/js/layout.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/su_new.js"></script>
+      wow.init();
+    </script>
+    <script src="../ECMS_DGSJ/js/layout.js"></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
     <script>
       function initailPages() {
-        const pageno = Number(window.location.search.slice(1)) > 0 ? Number(window.location.search.slice(1)) : 1;
-        const pageParentNode = document.querySelector('.pages').querySelector('ul');
+        const pageno =
+          Number(window.location.search.slice(1)) > 0
+            ? Number(window.location.search.slice(1))
+            : 1;
+        const pageParentNode = document
+          .querySelector('.pages')
+          .querySelector('ul');
         const spanNode = document.createElement('span');
         spanNode.innerText = pageno;
 
@@ -154,22 +213,32 @@
         replaceParentNode.replaceChild(spanNode, replaceNode);
         replaceParentNode.setAttribute('class', 'thisclass');
 
-        pageParentNode.querySelector('#prePage').setAttribute('href',`/membership/?${pageno-1}`);
-        pageParentNode.querySelector('#nextPage').setAttribute('href',`/membership/?${pageno + 1}`);
+        pageParentNode
+          .querySelector('#prePage')
+          .setAttribute('href', `/membership/?${pageno - 1}`);
+        pageParentNode
+          .querySelector('#nextPage')
+          .setAttribute('href', `/membership/?${pageno + 1}`);
 
         if (pageno == 1) {
-          pageParentNode.removeChild(pageParentNode.querySelector('#firstPage').parentNode);
-          pageParentNode.removeChild(pageParentNode.querySelector('#prePage').parentNode);
+          pageParentNode.removeChild(
+            pageParentNode.querySelector('#firstPage').parentNode
+          );
+          pageParentNode.removeChild(
+            pageParentNode.querySelector('#prePage').parentNode
+          );
         }
 
         if (pageno == 3) {
-          pageParentNode.removeChild(pageParentNode.querySelector('#nextPage').parentNode);
-          pageParentNode.removeChild(pageParentNode.querySelector('#tailPage').parentNode);
+          pageParentNode.removeChild(
+            pageParentNode.querySelector('#nextPage').parentNode
+          );
+          pageParentNode.removeChild(
+            pageParentNode.querySelector('#tailPage').parentNode
+          );
         }
       }
-      initailPages()
-
+      initailPages();
     </script>
   </body>
-
 </html>
