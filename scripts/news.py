@@ -55,7 +55,7 @@ def get_article_info(url, name):
 
   if (len(imgs) > 0):
     first_img = imgs[0]
-    first_imgPwd = '/ECMS_DGSJ/images/news/' + name + '-1' + '.jpg'
+    first_imgPwd = '../ECMS_DGSJ/images/news/' + name + '-1' + '.jpg'
 
     # 批量下载图片
     for imgSoup in imgs:
@@ -96,7 +96,7 @@ def get_item_info(item, name):
   href = item.a['href']
   article_info = get_article_info(base_url + href, name)
   pwd = './news/' + '/'.join(name.split('-')) + '.html'
-  write_html(article_info["soup"], pwd)
+  # write_html(article_info["soup"], pwd)
   return {
     "time": time,
     "title": text,
@@ -165,9 +165,9 @@ def getp_news_data():
   return len(data3)
 
 def main():
-  getp_shdt_data()
+  # getp_shdt_data()
 
-  getp_announcement_data()
+  # getp_announcement_data()
 
   getp_news_data()
 
