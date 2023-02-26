@@ -7970,6 +7970,10 @@
    padding: 0
  }
 
+ .indxArrivals .enterprises-tab li {
+  margin-right: 20px;
+}
+
  .arrivals-wrapper li {
    margin: 0 0 20px
  }
@@ -8033,34 +8037,28 @@
  }
  .indxArrivals .enterprises-tab {
   margin-top: 36px;
+  padding: 0 30px;
  }
 
  .indxArrivals .enterprises-tab ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
  }
- /* .indxArrivals .enterprises-tab a {
-  height: 40px;
-  line-height: 40px;
- } */
-
-/* .indxArrivals .enterprises-tab ul.momargin {
-  margin: 0
-}
-
-.indxArrivals .enterprises-tab ul.momargin li {
-  padding: 0
-} */
 
 .indxArrivals .enterprises-tab li {
-  margin: 0 20px 16px;
+  margin-bottom: 16px;
+  margin-right: 20px;
   width: 100px;
-  width: 33%;
+  width: 33.33%;
   position: relative;
   text-align: center;
   background-color: #d82019;
   border-radius: 5px;
   padding: 6px 20px;
+}
+
+.indxArrivals .enterprises-tab li:last-child {
+  margin-right: 0;
 }
 
 
@@ -8102,6 +8100,13 @@
      float: left;
      width: 33.33%;
    }
+   .indxArrivals .enterprises-tab li {
+    margin-right: 30px;
+  }
+  
+  .indxArrivals .enterprises-tab li:last-child {
+    margin-right: 0;
+  }
  }
 
  @media(min-width:1024px) {
@@ -8152,6 +8157,10 @@
  @media(min-width:1400px) {
    .arrivals-wrapper {
      padding: 5px 0
+   }
+
+   .indxArrivals .enterprises-tab {
+    padding: 0;
    }
  }
 
