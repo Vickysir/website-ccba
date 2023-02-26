@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
-  
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="Pragma" content="no-cache">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Pragma" content="no-cache" />
     <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
     <title>企业 - 爱尔兰科克华人商会</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/aswiper.min.css" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/layout.css" />
-    <script type="text/javascript" src="/ECMS_DGSJ/js/jquery-1.12.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/aswiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"
+    ></script>
     <script type="text/javascript" src="./item.js"></script>
     <script type="text/javascript" src="./data.js"></script>
   </head>
-  
+
   <body>
     <!--头部开始-->
     <header id="head"></header>
@@ -30,12 +43,17 @@
     <div class="headsideNav">
       <a href="javascript:;" class="slide-colse"></a>
       <a>
-        <img src="/ECMS_DGSJ/images/logo.png" alt="爱尔兰科克华人商会" title="爱尔兰科克华人商会" /></a>
+        <img
+          src="../ECMS_DGSJ/images/logo.png"
+          alt="爱尔兰科克华人商会"
+          title="爱尔兰科克华人商会"
+      /></a>
       <div class="slide-nav"></div>
     </div>
     <a href="javascript:;" class="exit-off-canvas"></a>
-    <div class="inside-banner ">
-      <img src="/ECMS_DGSJ/images/1569491368.jpg" /></div>
+    <div class="inside-banner">
+      <img src="../ECMS_DGSJ/images/1569491368.jpg" />
+    </div>
     <!-- 子导航开始 -->
     <div class="full-inside-subnav" id="news-subnav"></div>
     <!-- --子导航结束-- -->
@@ -49,9 +67,12 @@
       <ul class="clearfix" id="productlist">
         <template id="enterprisesCardTemplate">
           <li class="col-xs-6 col-sm-3">
-            <a href="/enterprises/detail.html?1" title="TT Glass">
+            <a href="./detail.html?1" title="TT Glass">
               <p class="pro-img">
-                <img src="/uploads/allimg/201110/1-201110224H10-L.jpg" alt="TT Glass">
+                <img
+                  src="../uploads/allimg/201110/1-201110224H10-L.jpg"
+                  alt="TT Glass"
+                />
               </p>
               <p class="pro-text">TT Glass</p>
             </a>
@@ -72,38 +93,49 @@
           <li><a href="/enterprises/?5" id="page5">5</a></li>
           <li><a href="/enterprises/?6" id="page6">6</a></li>
           <li><a href="/enterprises/?" id="nextPage">下一页</a></li>
-          <li><a href="/enterprises/?6" class="c-nav ease moye" id="tailPage">尾页</a></li>
+          <li>
+            <a href="/enterprises/?6" class="c-nav ease moye" id="tailPage"
+              >尾页</a
+            >
+          </li>
         </ul>
       </div>
     </div>
     <!--页码结束-->
 
     <!--底部开始-->
-      <footer class="footer" id="foot"></footer>
+    <footer class="footer" id="foot"></footer>
     <!--底部结束-->
     <a class="zdsbacktop" href="javascript:"></a>
     <script>
-      $("#head").load("../head.html");
-      $("#news-subnav").load("./subnav.html");
-      $("#foot").load("../foot.html");
+      $('#head').load('../head.html');
+      $('#news-subnav').load('./subnav.html');
+      $('#foot').load('../foot.html');
 
-      renderItem(otherData, 12)
-      initailPages('enterprises/', 6)
+      renderItem(otherData, 12);
+      initailPages('enterprises/', 6);
     </script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/scrollbar.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/jquery.countup.min.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/swiper.jquery.min.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/wow.min.js"></script>
-    <script>var wow = new WOW({
+    <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery.countup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/swiper.jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/wow.min.js"></script>
+    <script>
+      var wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
         offset: 0,
         mobile: true,
-        live: true
+        live: true,
       });
-      wow.init();</script>
-    <script src="/ECMS_DGSJ/js/layout.js"></script>
-    <script type="text/javascript" src="/ECMS_DGSJ/js/su_new.js"></script>
+      wow.init();
+    </script>
+    <script src="../ECMS_DGSJ/js/layout.js"></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
   </body>
-
 </html>

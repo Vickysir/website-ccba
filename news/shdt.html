@@ -1,116 +1,157 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
+    <title>商会动态 - 爱尔兰科克华人商会</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/aswiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../ECMS_DGSJ/css/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/Item.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/page.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="Pragma" content="no-cache">
-  <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
-  <title>商会动态 - 爱尔兰科克华人商会</title>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/aswiper.min.css" />
-  <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/animate.min.css" />
-  <link rel="stylesheet" type="text/css" href="/ECMS_DGSJ/css/layout.css" />
-  <script type="text/javascript" src="/ECMS_DGSJ/js/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="./js/Item.js"></script>
-  <script type="text/javascript" src="./js/data.js"></script>
-  <script type="text/javascript" src="./js/page.js"></script>
-</head>
+  <body>
+    <!--头部开始-->
+    <header id="head"></header>
+    <!--头部结束-->
+    <div class="headsideNav">
+      <a href="javascript:;" class="slide-colse"></a>
+      <a>
+        <img
+          src="../ECMS_DGSJ/images/logo.png"
+          alt="爱尔兰科克华人商会"
+          title="爱尔兰科克华人商会"
+      /></a>
+      <div class="slide-nav"></div>
+    </div>
+    <a href="javascript:;" class="exit-off-canvas"></a>
+    <div class="inside-banner">
+      <img src="../ECMS_DGSJ/images/1569466857.jpg" />
+    </div>
+    <!--子导航开始-->
+    <div class="full-inside-subnav" id="news-subnav"></div>
+    <!--子导航结束-->
 
-<body>
-  <!--头部开始-->
-  <header id="head"></header>
-  <!--头部结束-->
-  <div class="headsideNav">
-    <a href="javascript:;" class="slide-colse"></a>
-    <a>
-      <img src="/ECMS_DGSJ/images/logo.png" alt="爱尔兰科克华人商会" title="爱尔兰科克华人商会" /></a>
-    <div class="slide-nav"></div>
-  </div>
-  <a href="javascript:;" class="exit-off-canvas"></a>
-  <div class="inside-banner">
-    <img src="/ECMS_DGSJ/images/1569466857.jpg" />
-  </div>
-  <!--子导航开始-->
-  <div class="full-inside-subnav" id="news-subnav"></div>
-  <!--子导航结束-->
-  
-  <!-- <div class="common-clumb-min commonweb clearfix">
+    <!-- <div class="common-clumb-min commonweb clearfix">
     <div class="clumb-title">
       <h3 class="cn font22">商会动态</h3>
     </div>
   </div> -->
-  <div class="newscenter-list commonweb" id="newscenter-list">
-    <ul class="clearfix">
-      <!--图片尺寸378*278-->
-      <template id="news-item">
-        <li class="col-sm-4">
-          <a href="/news/shdt/281.html" title="我在快手上创业：20岁，1100万粉，每天睡在公司">
-            <p class="news-img">
-              <img src="/d/file/bigpic/200716/tbpupt5ktus090915.jpg" alt="我在快手上创业：20岁，1100万粉，每天睡在公司" /></p>
-            <div class="news-text">
-              <h3 class="name">我在快手上创业：20岁，1100万粉，每天睡在公司</h3>
-              <p class="desc"> 我在快手上创业：20岁，1100万粉，每天睡在公司对话林杰是一件很奇妙的事情，很难想象快手上如此活泼俏皮甚至搞怪的人，在现实中竟然如此羞涩。林杰今年 20 岁，在快手上拥有 1100 万粉丝，而做到...</p>
-              <span class="date">2019-10-29</span></div>
-          </a>
-        </li>
-      </template>
-    </ul>
-  </div>
-  <!--页码开始-->
-  <div class="commonweb padtbb">
-    <div class="pages">
-      <ul>
-        <li><a href="/news/shdt.html" id="firstPage">首页</a></li>
-        <li><a href="/news/shdt.html?" id="prePage">上一页</a></li>
-        <li><a href="/news/shdt.html?1" id="page1">1</a></li>
-        <li><a href="/news/shdt.html?2" id="page2">2</a></li>
-        <li><a href="/news/?" id="nextPage">下一页</a></li>
-        <li><a href="/news/shdt.html?2" class="c-nav ease moye" id="tailPage">尾页</a></li>
+    <div class="newscenter-list commonweb" id="newscenter-list">
+      <ul class="clearfix">
+        <!--图片尺寸378*278-->
+        <template id="news-item">
+          <li class="col-sm-4">
+            <a
+              href="./shdt/281.html"
+              title="我在快手上创业：20岁，1100万粉，每天睡在公司"
+            >
+              <p class="news-img">
+                <img
+                  src="../d/file/bigpic/200716/tbpupt5ktus090915.jpg"
+                  alt="我在快手上创业：20岁，1100万粉，每天睡在公司"
+                />
+              </p>
+              <div class="news-text">
+                <h3 class="name">
+                  我在快手上创业：20岁，1100万粉，每天睡在公司
+                </h3>
+                <p class="desc">
+                  我在快手上创业：20岁，1100万粉，每天睡在公司对话林杰是一件很奇妙的事情，很难想象快手上如此活泼俏皮甚至搞怪的人，在现实中竟然如此羞涩。林杰今年
+                  20 岁，在快手上拥有 1100 万粉丝，而做到...
+                </p>
+                <span class="date">2019-10-29</span>
+              </div>
+            </a>
+          </li>
+        </template>
       </ul>
     </div>
-  </div>
-  <!--页码结束-->
+    <!--页码开始-->
+    <div class="commonweb padtbb">
+      <div class="pages">
+        <ul>
+          <li><a href="/news/shdt.html" id="firstPage">首页</a></li>
+          <li><a href="/news/shdt.html?" id="prePage">上一页</a></li>
+          <li><a href="/news/shdt.html?1" id="page1">1</a></li>
+          <li><a href="/news/shdt.html?2" id="page2">2</a></li>
+          <li><a href="/news/?" id="nextPage">下一页</a></li>
+          <li>
+            <a href="/news/shdt.html?2" class="c-nav ease moye" id="tailPage"
+              >尾页</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--页码结束-->
 
-  <!--底部开始-->
-  <footer class="footer" id="foot"></footer>
-  <!--底部结束-->
+    <!--底部开始-->
+    <footer class="footer" id="foot"></footer>
+    <!--底部结束-->
 
-  <a class="zdsbacktop" href="javascript:"></a>
-  <script>
-    $("#head").load("../head.html");
-    $("#news-subnav").load("./subnav.html");
-    $("#foot").load("../foot.html");
-    renderItems(shdtData, 9)
-    const pageNo = getPgaeNo();
-    initailPages(pageNo, 2, 'news/shdt.html')
-  </script>
+    <a class="zdsbacktop" href="javascript:"></a>
+    <script>
+      $('#head').load('../head.html');
+      $('#news-subnav').load('./subnav.html');
+      $('#foot').load('../foot.html');
+      renderItems(shdtData, 9);
+      const pageNo = getPgaeNo();
+      initailPages(pageNo, 2, 'news/shdt.html');
+    </script>
     <script>
       setTimeout(() => {
-        addNewsSubnavClassName(newsSubNavMap)
-      }, 10)
+        addNewsSubnavClassName(newsSubNavMap);
+      }, 10);
     </script>
-  <script type="text/javascript" src="/ECMS_DGSJ/js/scrollbar.js"></script>
-  <script type="text/javascript" src="/ECMS_DGSJ/js/jquery.countup.min.js"></script>
-  <script type="text/javascript" src="/ECMS_DGSJ/js/swiper.jquery.min.js"></script>
-  <script type="text/javascript" src="/ECMS_DGSJ/js/wow.min.js"></script>
-  <script>var wow = new WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 0,
-      mobile: true,
-      live: true
-    });
-    wow.init();</script>
-  <script src="/ECMS_DGSJ/js/layout.js"></script>
-  <script type="text/javascript" src="/ECMS_DGSJ/js/su_new.js"></script>
-</body>
-
+    <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/jquery.countup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../ECMS_DGSJ/js/swiper.jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/wow.min.js"></script>
+    <script>
+      var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true,
+      });
+      wow.init();
+    </script>
+    <script src="../ECMS_DGSJ/js/layout.js"></script>
+    <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
+  </body>
 </html>

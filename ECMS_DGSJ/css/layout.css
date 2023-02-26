@@ -7456,12 +7456,56 @@
    border-color: #d82019
  }
 
- .indexbanner li a img {
-   display: block;
-   width: 100%;
-   position: relative;
-   height: 568px
+.home-banner1 {
+  background-image: url('../images/banner1.jpg');
+  background-size: cover;
  }
+
+ .home-banner2 {
+  background-image: url('../images/banner2.jpg');
+  background-size: cover;
+ }
+
+ .home-banner3 {
+  background-image: url('../images/banner3.jpg');
+  background-size: cover;
+ }
+
+ .indexbanner li div {
+  height: 100px
+ }
+
+ .indexbanner {
+  margin-top: 30px;
+ }
+ @media(max-width:600px) {
+  .indexbanner li div {
+   height: 280px
+    }
+  }
+
+  @media(min-width:600px) {
+    .indexbanner li div {
+      height: 300px
+      }
+    }
+
+  @media(min-width: 800px) {
+    .indexbanner li div {
+      height: 400px
+      }
+    }
+
+  @media(min-width: 1024px) {
+    .indexbanner li div {
+      height: 568px
+    }
+    .indexbanner {
+      margin-top: 0px;
+     }
+  }
+
+ 
 
  @media(min-width:1024px) {
    .indexbanner .ipages {
