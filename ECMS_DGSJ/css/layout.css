@@ -940,6 +940,7 @@ header.shadow {
 .header-nav li {
   position: relative;
   border-bottom: 1px solid #898989;
+  padding: 0 10px;
 }
 
 .header-nav li h3 {
@@ -992,6 +993,7 @@ header.shadow {
   padding: 0;
   display: none;
   overflow-y: scroll;
+  z-index: 20;
   /* padding-bottom: 190px */
 }
 
@@ -8253,7 +8255,7 @@ body {
   text-align: center;
 }
 
-.indxArrivals .enterprises-tab li:hover div {
+.indxArrivals .enterprises-tab li:hover {
   background-color: #333;
 }
 
@@ -8262,6 +8264,11 @@ body {
   display: block;
   font-weight: 700;
   /* color: #d82019; */
+}
+
+.indxArrivals .enterprises-tab .active {
+  background-color: #333;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {

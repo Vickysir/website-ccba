@@ -20,7 +20,7 @@ function renderPartnerItem(data) {
     const liNode = document.createElement("home-partner-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
-    liNode.setAttribute('data-href', 'javascrit:;');
+    liNode.setAttribute('data-href', item.href);
     liNode.setAttribute('data-src', item.imgPwd);
     liNode.setAttribute('class', "swiper-slide")
     parentNode.appendChild(liNode);

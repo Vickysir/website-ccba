@@ -7,14 +7,11 @@ const aboutSubNavMap = new Map([
 ]);
 
 function addAboutSubnavClassName() {
-  const pathname = window.location.pathname.split('/')
-  if (pathname.length > 2) {
-    const name = pathname[2];
-    const lisHTMLCollection = document.querySelector('#subnav').getElementsByTagName('li');
-    const curNode = lisHTMLCollection.item(aboutSubNavMap.get(name));
-    curNode.setAttribute('class', 'current')
-
-  }
+  const pathname = window.location.pathname.split('/');
+  const name = pathname[pathname.length -1].split('.');
+  const lisHTMLCollection = document.querySelector('#subnav').getElementsByTagName('li');
+  const curNode = lisHTMLCollection.item(aboutSubNavMap.get(name[0]));
+  curNode.setAttribute('class', 'current')
 };
 
 

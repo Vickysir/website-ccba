@@ -4,25 +4,6 @@ $(function () {
   var backtop = $("a.zdsbacktop");
   var wint = $(window).scrollTop();
 
-  var language = localStorage.getItem('language');
-  if (language == 'EN') {
-    $(".switch-language a").eq(1).addClass("language-red");
-  } else {
-    $(".switch-language a").eq(0).addClass("language-red");
-  }
-
-  $('.switch-language a').eq(0).on('click', function () {
-    $(".switch-language a").eq(1).removeClass("language-red");
-    $(".switch-language a").eq(0).addClass("language-red");
-    localStorage.setItem('language', 'CN');
-  });
-
-  $('.switch-language a').eq(1).on('click', function () {
-    $(".switch-language a").eq(0).removeClass("language-red");
-    $(".switch-language a").eq(1).addClass("language-red");
-    localStorage.setItem('language', 'EN');
-  });
-
   $(window).on('scroll', function () {
     wint = $(window).scrollTop();
     if (wint <= 400) { backtop.fadeOut(300); };
@@ -332,6 +313,8 @@ $(function () {
   }
   window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 });
+
+
 setStickyFooter($('.footer')); function setStickyFooter($footer, $tabsArr) {
   var MutationObserver = (function () {
     var prefixes = ['WebKit', 'Moz', 'O', 'Ms', ''];

@@ -32,7 +32,7 @@ function renderItems(data, step) {
   data.slice(start, end).forEach(item => {
     const liNode = document.createElement("news-item");
     liNode.setAttribute('data-title', item.title);
-    liNode.setAttribute('data-href', `/news/detail.html?${item.id}`);
+    liNode.setAttribute('data-href', `../news/detail.html?${item.id}`);
     liNode.setAttribute('data-time', item.time);
     liNode.setAttribute('data-desc', item.desc);
     liNode.setAttribute('data-src', item.imgPwd);
@@ -43,10 +43,8 @@ function renderItems(data, step) {
 
 function addNewsSubnavClassName(map) {
   const pathname = window.location.pathname.split('/');
-  if (!!pathname[2]) {
-    const name = pathname[2].split('.html')[0];
-    const lisHTMLCollection = document.querySelector('#news-subnav').getElementsByTagName('li');
-    const curNode = lisHTMLCollection.item(map.get(name));
-    curNode.setAttribute('class', 'current')
-  }
+  const name = pathname[pathname.length - 1].split('.html')[0];
+  const lisHTMLCollection = document.querySelector('#news-subnav').getElementsByTagName('li');
+  const curNode = lisHTMLCollection.item(map.get(name));
+  curNode.setAttribute('class', 'current')
 }

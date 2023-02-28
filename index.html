@@ -39,7 +39,8 @@
     <script type="text/javascript" src="./news/js/homeNewsItem.js"></script>
     <script type="text/javascript" src="./ECMS_DGSJ/js/data.js"></script>
     <script type="text/javascript" src="./ECMS_DGSJ/js/home.js"></script>
-  </head>
+    <script type="text/javascript" src="./ECMS_DGSJ/js/language.js"></script>
+</head>
 
   <body>
     <!--头部开始-->
@@ -88,7 +89,7 @@
                 <img src="./ECMS_DGSJ/images/pp1.png" alt="团结华人" />
               </div>
               <div class="inxpro-text">
-                <h3 class="font18">团结华人</h3>
+                <h3 class="font18" style="font-weight: 800;">团结华人</h3>
                 <h3 class="font16">提升华人的社会影响力和声誉；维护华人社区安定团结，维护华人合法权益</h3>
               </div>
             </a>
@@ -143,7 +144,7 @@
           商会的宗旨是广泛联系和团结在科克地区的华人企业、组织及个人；为中国爱尔兰两国企业提供相关的政策、法律以及商业等领域的咨询和指导服务，搭建经济、文化交流合作的桥梁；并积极参与当地的政治、经济和文化活动，努力提升华人的社会影响力和声誉；维护华人社区安定团结，维护华人合法权益，树立华人良好形象。
         </p>
         <div class="index-more wow fadeInUp">
-          <a href="/about/" style="margin-top: 26px">了解更多</a>
+          <a href="/website-ccba/about/" style="margin-top: 26px">了解更多</a>
         </div>
       </div>
     </div>
@@ -176,14 +177,14 @@
             <ul class="clearfix swiper-wrapper"></ul>
             <template id="home-enterprises-item">
               <li style="width: 100%">
-                <a href="/products/p2/15.html" title="">
+                <div>
                   <p class="solut-img">
                     <img />
                   </p>
                   <div class="solut-text">
                     <h3 class="font18" style="font-weight: 500"></h3>
                   </div>
-                </a>
+                </div>
               </li>
             </template>
           </div>
@@ -191,7 +192,7 @@
           <a href="javascript:;" class="index-btn index-next"></a>
         </div>
         <div class="index-more center wow fadeInUp">
-          <a href="/enterprises/">了解更多</a>
+          <a href="/website-ccba/enterprises/">了解更多</a>
         </div>
       </div>
     </div>
@@ -231,7 +232,7 @@
           <a href="javascript:;" class="index-btn index-next"></a> -->
         </div>
         <div class="index-more center wow fadeInUp">
-          <a href="/news/">了解更多</a>
+          <a href="/website-ccba/news/">了解更多</a>
         </div>
       </div>
     </div>
@@ -239,14 +240,14 @@
       <div class="commonweb">
         <div class="index-text center wow fadeInDown">
           <h2 class="cn font30">外部链接</h2>
-          <h3 class="en font24"></h3>
+          <h3 class="en font24">LINKS</h3>
         </div>
         <div class="inxpart-list wow fadeInUp">
           <div class="partner-wrapper">
             <ul class="clearfix swiper-wrapper">
               <template id="home-partner-item">
                 <li class="swiper-slide">
-                  <a href="javascript:;">
+                  <a href="javascript:;" target="_blank">
                     <img
                       src="./ECMS_DGSJ/images/1-19102QGU10-L.jpg"
                       alt="外部链接"
@@ -303,6 +304,10 @@
           e.preventDefault();
           const s = document.querySelector('.arrivalsp-min').swiper;
           s.slideTo(0, 1000, false);
+          $('.enterprises-tab li').each(function() {
+            $(this).removeClass('active');
+          });
+          $('.enterprises-tab li').eq(0).addClass('active');
         });
       document
         .querySelector('.enterprises-hotel')
@@ -310,6 +315,10 @@
           e.preventDefault();
           const s = document.querySelector('.arrivalsp-min').swiper;
           s.slideTo(restaurantEnterprisesData.length, 1000, false);
+          $('.enterprises-tab li').each(function() {
+            $(this).removeClass('active');
+          });
+          $('.enterprises-tab li').eq(1).addClass('active');
         });
       document
         .querySelector('.enterprises-other')
@@ -321,6 +330,10 @@
             1000,
             false
           );
+          $('.enterprises-tab li').each(function() {
+            $(this).removeClass('active');
+          });
+          $('.enterprises-tab li').eq(2).addClass('active');
         });
     </script>
   </body>

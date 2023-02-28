@@ -41,12 +41,12 @@
         connectedCallback() {
           const templatElem = document.getElementById('membershipCardTemplate');
           const content = templatElem.content.cloneNode(true);
-          content.querySelector('a').href = this.getAttribute(`${prefix}href`);
-          content.querySelector('a > .membership-name').textContent =
+          // content.querySelector('a').href = this.getAttribute(`${prefix}href`);
+          content.querySelector('div > .membership-name').textContent =
             this.getAttribute(`${prefix}name`);
-          content.querySelector('a > .membership-job').textContent =
+          content.querySelector('div > .membership-job').textContent =
             this.getAttribute(`${prefix}job`);
-          content.querySelector('a').alt = this.getAttribute(`${prefix}name`);
+          // content.querySelector('a').alt = this.getAttribute(`${prefix}name`);
           content.querySelector('span').textContent = this.getAttribute(
             `${prefix}time`
           );
@@ -86,11 +86,11 @@
         </div>
       </div>
     </div> -->
-    <div class="common-clumb-min commonweb clearfix">
+    <!-- <div class="common-clumb-min commonweb clearfix">
       <div class="clumb-title">
         <h3 class="cn font22">商会成员</h3>
       </div>
-    </div>
+    </div> -->
     <div class="Pledge-min commonweb padtb">
       <div class="Pledetext">
         <div
@@ -111,13 +111,13 @@
               "
             >
               <span style="color: #959595; float: right"></span>
-              <a alt="">
+              <div>
                 <span
                   class="membership-name"
                   style="width: 100px; display: inline-block"
                 ></span>
                 <span class="membership-job"></span>
-              </a>
+              </div>
             </li>
           </template>
           <ul style="margin: 0px; padding: 0px; list-style-type: none"></ul>
@@ -213,30 +213,30 @@
         replaceParentNode.replaceChild(spanNode, replaceNode);
         replaceParentNode.setAttribute('class', 'thisclass');
 
-        pageParentNode
-          .querySelector('#prePage')
-          .setAttribute('href', `/membership/?${pageno - 1}`);
-        pageParentNode
-          .querySelector('#nextPage')
-          .setAttribute('href', `/membership/?${pageno + 1}`);
+        // pageParentNode
+        //   .querySelector('#prePage')
+        //   .setAttribute('href', `/membership/?${pageno - 1}`);
+        // pageParentNode
+        //   .querySelector('#nextPage')
+        //   .setAttribute('href', `/membership/?${pageno + 1}`);
 
-        if (pageno == 1) {
-          pageParentNode.removeChild(
-            pageParentNode.querySelector('#firstPage').parentNode
-          );
-          pageParentNode.removeChild(
-            pageParentNode.querySelector('#prePage').parentNode
-          );
-        }
+        // if (pageno == 1) {
+        //   pageParentNode.removeChild(
+        //     pageParentNode.querySelector('#firstPage').parentNode
+        //   );
+        //   pageParentNode.removeChild(
+        //     pageParentNode.querySelector('#prePage').parentNode
+        //   );
+        // }
 
-        if (pageno == 3) {
-          pageParentNode.removeChild(
-            pageParentNode.querySelector('#nextPage').parentNode
-          );
-          pageParentNode.removeChild(
-            pageParentNode.querySelector('#tailPage').parentNode
-          );
-        }
+        // if (pageno == 3) {
+        //   pageParentNode.removeChild(
+        //     pageParentNode.querySelector('#nextPage').parentNode
+        //   );
+        //   pageParentNode.removeChild(
+        //     pageParentNode.querySelector('#tailPage').parentNode
+        //   );
+        // }
       }
       initailPages();
     </script>

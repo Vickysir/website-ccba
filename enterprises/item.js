@@ -52,26 +52,24 @@ function initailPages(name, totalPage) {
   replaceParentNode.replaceChild(spanNode, replaceNode);
   replaceParentNode.setAttribute('class', 'thisclass');
 
-  pageParentNode.querySelector('#prePage').setAttribute('href',`/${name}?${pageno-1}`);
-  pageParentNode.querySelector('#nextPage').setAttribute('href',`/${name}?${pageno + 1}`);
+  // pageParentNode.querySelector('#prePage').setAttribute('href',`/${name}?${pageno-1}`);
+  // pageParentNode.querySelector('#nextPage').setAttribute('href',`/${name}?${pageno + 1}`);
 
-  if (pageno == 1) {
-    pageParentNode.removeChild(pageParentNode.querySelector('#firstPage').parentNode);
-    pageParentNode.removeChild(pageParentNode.querySelector('#prePage').parentNode);
-  }
+  // if (pageno == 1) {
+  //   pageParentNode.removeChild(pageParentNode.querySelector('#firstPage').parentNode);
+  //   pageParentNode.removeChild(pageParentNode.querySelector('#prePage').parentNode);
+  // }
 
-  if (pageno == totalPage) {
-    pageParentNode.removeChild(pageParentNode.querySelector('#nextPage').parentNode);
-    pageParentNode.removeChild(pageParentNode.querySelector('#tailPage').parentNode);
-  }
+  // if (pageno == totalPage) {
+  //   pageParentNode.removeChild(pageParentNode.querySelector('#nextPage').parentNode);
+  //   pageParentNode.removeChild(pageParentNode.querySelector('#tailPage').parentNode);
+  // }
 }
 
-function addAboutSubnavClassName(map) {
+function addEnterprisesSubnavClassName(map) {
   const pathname = window.location.pathname.split('/');
-  if (!!pathname[2]) {
-    const name = pathname[2].split('.html')[0];
-    const lisHTMLCollection = document.querySelector('#news-subnav').getElementsByTagName('li');
-    const curNode = lisHTMLCollection.item(map.get(name));
-    curNode.setAttribute('class', 'current')
-  }
+  const name = pathname[pathname.length - 1].split('.html')[0];
+  const lisHTMLCollection = document.querySelector('#news-subnav').getElementsByTagName('li');
+  const curNode = lisHTMLCollection.item(map.get(name));
+  curNode.setAttribute('class', 'current')
 }
