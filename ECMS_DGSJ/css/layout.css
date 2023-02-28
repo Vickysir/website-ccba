@@ -11,10 +11,8 @@ html {
 }
 
 .pages ul li.thisclass {
-  display: inline-block;
   border: 1px solid #d82019;
   padding: 6px 15px;
-  margin: 0 1px;
   background: #d82019;
   color: #fff;
 }
@@ -324,6 +322,11 @@ input:-webkit-autofill {
 
 .articleInfo {
   font-size: 16px;
+}
+
+.articleInfo img {
+  display: block;
+  margin: 30px auto;
 }
 
 @media (max-width: 320px) {
@@ -1870,6 +1873,26 @@ body {
 .padtbb {
   padding-bottom: 52px;
 }
+
+.padtbb .pages{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.padtbb .pages ul{
+  display: flex;
+}
+
+.padtbb .pages li {
+  display: block;
+  /* border: 1px solid #d82019; */
+  padding: 6px 15px;
+  margin: 2px;
+  /* background: #d82019; */
+  /* color: #fff; */
+}
+
 
 .nopadtb {
   padding-top: 0;
@@ -3527,6 +3550,11 @@ body {
   overflow: hidden;
 }
 
+.newscenter-list li p {
+  height: 160px;
+  overflow: hidden;
+}
+
 .newscenter-list li img {
   display: block;
   width: 100%;
@@ -4793,6 +4821,10 @@ body {
 
   .pagess ul li a:hover {
     color: #fff;
+  }
+
+  @media maxWidth {
+    
   }
 }
 
@@ -9202,13 +9234,13 @@ body {
    -ms-transform: translateY(-50%);
    -o-transform: translateY(-50%);
    transform: translateY(-50%);
-   left: 14px;
+   left: 30px;
    width: 30%
  }
 
  .inxprod-list li .inxpro-img img {
    display: block;
-   max-width: 100%
+   max-width: 80%
  }
 
  .inxprod-list li .inxpro-text {

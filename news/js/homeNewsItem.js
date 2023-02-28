@@ -42,7 +42,7 @@ function renderItems(data) {
   data.slice(0, 5).filter((item, index) => !!item.img_src && index != 1).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
-    liNode.setAttribute('data-href', `/website-ccba/news/detail.html?${item.id}`);
+    liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
     liNode.setAttribute('data-time', item.time);
     liNode.setAttribute('data-src', item.imgPwd);
     liNode.setAttribute('class', "swiper-slide wow animated")
@@ -53,7 +53,7 @@ function renderItems(data) {
   data.slice(6, 11).filter((item, index) => !!item.img_src && index != 1).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
-    liNode.setAttribute('data-href', `/website-ccba/news/detail.html?${item.id}`);
+    liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
     liNode.setAttribute('data-time', item.time);
     liNode.setAttribute('data-src', item.imgPwd);
     liNode.setAttribute('class', "swiper-slide wow animated")
