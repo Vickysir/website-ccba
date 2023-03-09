@@ -1162,13 +1162,16 @@ header.shadow {
   margin-top: -2px;
 }
 
-.pcnavmenubtn {
-  display: none;
-}
-
+.pcnavmenubtn,
 .switch-language {
   display: none;
 }
+
+/* .mobile-language-en {
+  display: none;
+}
+.mobile-language-cn, */
+
 
 .switch-language .language-red {
   color: #d82019;
@@ -1471,7 +1474,11 @@ header.shadow {
     border-left: 1px solid #eaeaea;
     padding: 0 27px;
   }
-
+  .mobile-language-en,
+  .mobile-language-cn {
+    display: block;
+  }
+  
   .switch-language {
     /* display: flex; */
     position: fixed;
@@ -1486,11 +1493,7 @@ header.shadow {
     margin: 0 20px;
     height: 90px;
   }
-  .switch-language a {
-  }
-  .switch-language:hover {
-    /* border-bottom: 3px solid #d82019; */
-  }
+
   .switch-language a:hover {
     font-weight: 700;
     color: #d82019;

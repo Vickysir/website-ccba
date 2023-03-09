@@ -240,9 +240,12 @@ $(function () {
         var thisimg = thisindex.find("a .img").attr("mobile-img");
         thisindex.find("a .img").attr("src", thisimg); thisindex.find(".bannertextcont").attr("style", "");
       });
-      $(".pcnavmenubtn").show();
-      $(".header-nav").hide();
       $(".switch-language").hide();
+
+      $(".pcnavmenubtn").show();
+      $(".mobile-language-en").show();
+      $(".mobile-language-cn").show();
+      $(".header-nav").hide();
 
       // $(".header-nav,.search-con").unbind("mouseenter");
       // $(".header-nav,.search-con").unbind("mouseleave");
@@ -282,6 +285,8 @@ $(function () {
     if ($(window).width() > 1279) {
       $(".header-nav").show();
       $(".switch-language").show();
+      $(".mobile-language-en").hide();
+      $(".mobile-language-cn").hide();
       $(".pcnavmenubtn").hide();
       $(".header-nav li").hover(function () {
         if ($(this).find(".sub-nav a").length > 0) {

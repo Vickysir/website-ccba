@@ -1,7 +1,6 @@
 {
   "nav": [
     "Home",
-    "Membership",
     "About",
     "Enterprises",
     "News",
@@ -11,8 +10,7 @@
   "subnav": [
     [
       "Introduction",
-      "Constitution",
-      "Architecture"
+      "About Us"
     ],
     [
       "Restaurant",
@@ -38,5 +36,6 @@
     "message": ["Name", "Tell", "Address", "Email", "Content", "Submit"]
   },
   "link": "Links",
-  "about": "About Us"
+  "about": "About Us",
+  "title": "Cork Chinese Business Association"
 }

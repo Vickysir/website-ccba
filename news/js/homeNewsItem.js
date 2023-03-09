@@ -62,8 +62,8 @@ function renderItems(data) {
 }
 
 function renderEnterprisesItem(data) {
-  const parentNode = document.querySelector('.arrivalsp-min > ul');
-  data.forEach((item, index) => {
+  const parentNode = document.querySelector('#inxenterprises-list1 > ul');
+  data.slice(3, 6).forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
@@ -77,5 +77,22 @@ function renderEnterprisesItem(data) {
       liNode.setAttribute('class', "swiper-slide")
     }
     parentNode.appendChild(liNode);
+  });
+
+  const parentNode2 = document.querySelector('#inxenterprises-list2 > ul');
+  data.slice(9, 12).forEach((item, index) => {
+    const liNode = document.createElement("home-enterprises-item");
+    liNode.setAttribute('data-title', item.title);
+    // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
+    liNode.setAttribute('data-href', 'javascrit:;');
+    liNode.setAttribute('data-src', item.url);
+    if (index == 0 || index == 2) {
+      liNode.setAttribute('class', "swiper-slide wow fadeInUp")
+    } else if(index == 1) {
+      liNode.setAttribute('class', "swiper-slide wow fadeInDown")
+    } else {
+      liNode.setAttribute('class', "swiper-slide")
+    }
+    parentNode2.appendChild(liNode);
   });
 }

@@ -15,7 +15,7 @@ function writeLinkNode(id, nodeIdString, data) {
   var curData = getPageDataById(id, data);
   var thisNode = document.querySelector(nodeIdString)
   if (curData) {
-    thisNode.href = '/membership/detail.html?' + id;
+    thisNode.href = '/about/membership/detail.html?' + id;
     thisNode.innerHTML = curData.name;
   } else {
     thisNode.parentElement.innerHTML = '';
@@ -29,7 +29,7 @@ function detailMain(sourceData) {
   if (data) {
     document.querySelector('#membership-articleInfo').innerHTML = data.job || data.name;
     document.querySelector('#membership-detail-title').innerHTML = data.name;
-    document.querySelector('#membership-detail-subtitle').href = `/membership/detail.html?${data.id}`;
+    document.querySelector('#membership-detail-subtitle').href = `/about/membership/detail.html?${data.id}`;
     document.querySelector('#membership-detail-subtitle').innerHTML = data.name;
 
     writeLinkNode(Number(id) - 1, '#membership-foot-last', sourceData);

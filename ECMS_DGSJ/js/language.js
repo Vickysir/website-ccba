@@ -21,20 +21,28 @@ function initial() {
   $('.switch-language a').eq(1).on('click', function () {
     enSelect();
   });
+
+  $('.mobile-language-cn').eq(0).on('click', function () {
+    cnSelect();
+  });
+  
+  $('.mobile-language-en').eq(0).on('click', function () {
+    enSelect();
+  });
 }
 
 function cnSelect() {
   $(".switch-language a").eq(1).removeClass("language-red");
   $(".switch-language a").eq(0).addClass("language-red");
   localStorage.setItem('language', 'CN');
-  getlanguageJson('/website-ccba/language/index_cn.json', translateIndexPages);
+  getlanguageJson('../language/index_cn.json', translateIndexPages);
 }
 
 function enSelect() {
   $(".switch-language a").eq(0).removeClass("language-red");
   $(".switch-language a").eq(1).addClass("language-red");
   localStorage.setItem('language', 'EN');
-  getlanguageJson('/website-ccba/language/index_en.json', translateIndexPages);
+  getlanguageJson('../language/index_en.json', translateIndexPages);
 }
 
 function flatArray(arr) {
@@ -57,6 +65,10 @@ function getlanguageJson(url, translatePages) {
     },
   });
 }
+
+function translateTitle(data) {
+  $('title').text(data);
+};
 
 function translateHeadAndFoot(data) {
   let navArr = data.nav;
@@ -118,7 +130,6 @@ function translateContact(data) {
 
   $('.Comprepair span').each(function (index) {
     $(this).text(message[index])
-    // $(this).text(`<span><em><font style='color:red'>*</font></em>${message[index]}：</span>`)
   })
 
   $('.lisubmit input').attr('value', message[message.length - 1]);
@@ -132,23 +143,31 @@ function translateTabPages(data) {
   switch(path) {
     case "about":
       translateMenu(data.subnav[0]);
+      translateTitle(data.nav[2] + ' - ' + data.title);
       break;
     case "enterprises":
       translateMenu(data.subnav[1]);
+      translateTitle(data.nav[3] + ' - ' + data.title);
       break;
     case "news":
       translateMenu(data.subnav[2]);
+      translateTitle(data.nav[4] + ' - ' + data.title);
       break;
     case "contact":
       translateContact(data.contact);
+      translateTitle(data.nav[6] + ' - ' + data.title);
       break;
     case "chineseSchool":
       $('.clumb-title h3').each(function (index) {
         $(this).text(data.nav[5]);
       });
+      translateTitle(data.nav[5] + ' - ' + data.title);
       break;
     case 'membership':
+      translateTitle(data.nav[1] + ' - ' + data.title);
+      break;
     default:
+      translateTitle(data.title);
   }
 }
 

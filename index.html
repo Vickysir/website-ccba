@@ -158,7 +158,7 @@
           <h3 class="en font24">Enterprises</h3>
         </div>
 
-        <div class="enterprises-tab font18">
+        <!-- <div class="enterprises-tab font18">
           <ul class="wow fadeInRight">
             <li>
               <a href="javascript:;" class="enterprises-restaurant">餐馆</a>
@@ -173,10 +173,10 @@
               <div id="line"></div>
             </li>
           </ul>
-        </div>
+        </div> -->
 
         <div class="arrivals-wrapper">
-          <div class="arrivalsp-min">
+          <div class="arrivalsp-min" id="inxenterprises-list1" style="margin-top: 30px;">
             <ul class="clearfix swiper-wrapper"></ul>
             <template id="home-enterprises-item">
               <li style="width: 100%">
@@ -191,8 +191,11 @@
               </li>
             </template>
           </div>
-          <a href="javascript:;" class="index-btn index-prev"></a>
-          <a href="javascript:;" class="index-btn index-next"></a>
+          <div class="arrivalsp-min" id="inxenterprises-list2" style="margin-top: 20px;">
+            <ul class="clearfix swiper-wrapper"></ul>
+          </div>
+          <!-- <a href="javascript:;" class="index-btn index-prev"></a>
+          <a href="javascript:;" class="index-btn index-next"></a> -->
         </div>
         <div class="index-more center wow fadeInUp">
           <a href="./enterprises/">了解更多</a>
@@ -301,43 +304,43 @@
     <script src="./ECMS_DGSJ/js/layout.js"></script>
     <script type="text/javascript" src="./ECMS_DGSJ/js/su_new.js"></script>
     <script defer>
-      document
-        .querySelector('.enterprises-restaurant')
-        .addEventListener('click', function (e) {
-          e.preventDefault();
-          const s = document.querySelector('.arrivalsp-min').swiper;
-          s.slideTo(0, 1000, false);
-          $('.enterprises-tab li').each(function() {
-            $(this).removeClass('active');
-          });
-          $('.enterprises-tab li').eq(0).addClass('active');
-        });
-      document
-        .querySelector('.enterprises-hotel')
-        .addEventListener('click', function (e) {
-          e.preventDefault();
-          const s = document.querySelector('.arrivalsp-min').swiper;
-          s.slideTo(restaurantEnterprisesData.length, 1000, false);
-          $('.enterprises-tab li').each(function() {
-            $(this).removeClass('active');
-          });
-          $('.enterprises-tab li').eq(1).addClass('active');
-        });
-      document
-        .querySelector('.enterprises-other')
-        .addEventListener('click', function (e) {
-          e.preventDefault();
-          const s = document.querySelector('.arrivalsp-min').swiper;
-          s.slideTo(
-            restaurantEnterprisesData.length + hotelEnterprisesData.length,
-            1000,
-            false
-          );
-          $('.enterprises-tab li').each(function() {
-            $(this).removeClass('active');
-          });
-          $('.enterprises-tab li').eq(2).addClass('active');
-        });
+      // document
+      //   .querySelector('.enterprises-restaurant')
+      //   .addEventListener('click', function (e) {
+      //     e.preventDefault();
+      //     const s = document.querySelector('.arrivalsp-min').swiper;
+      //     s.slideTo(0, 1000, false);
+      //     $('.enterprises-tab li').each(function() {
+      //       $(this).removeClass('active');
+      //     });
+      //     $('.enterprises-tab li').eq(0).addClass('active');
+      //   });
+      // document
+      //   .querySelector('.enterprises-hotel')
+      //   .addEventListener('click', function (e) {
+      //     e.preventDefault();
+      //     const s = document.querySelector('.arrivalsp-min').swiper;
+      //     s.slideTo(restaurantEnterprisesData.length, 1000, false);
+      //     $('.enterprises-tab li').each(function() {
+      //       $(this).removeClass('active');
+      //     });
+      //     $('.enterprises-tab li').eq(1).addClass('active');
+      //   });
+      // document
+      //   .querySelector('.enterprises-other')
+      //   .addEventListener('click', function (e) {
+      //     e.preventDefault();
+      //     const s = document.querySelector('.arrivalsp-min').swiper;
+      //     s.slideTo(
+      //       restaurantEnterprisesData.length + hotelEnterprisesData.length,
+      //       1000,
+      //       false
+      //     );
+      //     $('.enterprises-tab li').each(function() {
+      //       $(this).removeClass('active');
+      //     });
+      //     $('.enterprises-tab li').eq(2).addClass('active');
+      //   });
     </script>
   </body>
 </html>

@@ -91,6 +91,9 @@
         <h3 class="cn font22">商会成员</h3>
       </div>
     </div> -->
+    <!-- 子导航开始 -->
+    <div class="full-inside-subnav" id="subnav"></div>
+    <!-- 子导航结束 -->
     <div class="Pledge-min commonweb padtb">
       <div class="Pledetext">
         <div
@@ -127,9 +130,9 @@
           <ul>
             <!-- <li><a href="./index.html" id="firstPage">首页</a></li> -->
             <!-- <li><a href="./index.html?" id="prePage">上一页</a></li> -->
-            <li><a href="./index.html?1" id="page1">1</a></li>
-            <li><a href="./index.html?2" id="page2">2</a></li>
-            <li><a href="./index.html?3" id="page3">3</a></li>
+            <li><a href="./membership.html?1" id="page1">1</a></li>
+            <li><a href="./membership.html?2" id="page2">2</a></li>
+            <li><a href="./membership.html?3" id="page3">3</a></li>
             <!-- <li><a href="./index.html?" id="nextPage">下一页</a></li>
             <li>
               <a href="./index.html?3" class="c-nav ease moye" id="tailPage"
@@ -146,9 +149,16 @@
     <a class="zdsbacktop" href="javascript:"></a>
     <script>
       $('#head').load('../head.html');
+      $('#subnav').load('./subnav.html');
       $('#foot').load('../foot.html');
     </script>
     <script type="text/javascript" src="membership.js"></script>
+    <script type="text/javascript" src="./subnav.js"></script>
+    <script>
+      setTimeout(() => {
+        addAboutSubnavClassName();
+      }, 50);
+    </script>
     <script>
       function loadItem() {
         const pageNo = window.location.search.slice(1);

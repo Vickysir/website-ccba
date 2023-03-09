@@ -1,9 +1,9 @@
 
 const aboutSubNavMap = new Map([
   ['introduction', 0],
-  ['constitution', 1],
-  ['architecture', 2],
-  ['pinpailicheng', 3],
+  ['membership', 1],
+  // ['architecture', 2],
+  // ['pinpailicheng', 3],
 ]);
 
 function addAboutSubnavClassName() {
