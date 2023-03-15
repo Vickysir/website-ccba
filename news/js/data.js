@@ -43,6 +43,15 @@ const announcementData = [
 
 const shdtData = [
   {
+    time: '2022-10-10',
+    title: '爱尔兰科克华人商会第三届理事会就职典礼胜利举行',
+    href: '',
+    imgPwd: '../ECMS_DGSJ/images/news/shdt-13-1.jpg',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc: '金秋送爽，硕果飘香，2022年10月10日，爱尔兰科克华人商会第三届理事会就职典礼在科克市五星级高尔夫度假酒店Fota圆满举行。出席本次庆典的嘉宾和单位有科克郡政府郡长 Danny Collins 议员，Fota 酒店集团 Julie Kelly 女士，爱尔兰宋庆龄基金会 Soong Ching Ling Foundation Ireland 陈敏琪女士等二十余家机构和中外友好人士近两百余人。科克市政府，中国驻爱尔兰大使馆，以及科克华人商会在中国的代表处也发来了祝贺的视频。',
+    id: 'shdt-13',
+  },
+  {
     time: '2020-11-09',
     title: '科克华人商会代表团参加第11届欧洲论坛',
     href: '/a/news/shdt/123.html',

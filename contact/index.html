@@ -119,8 +119,9 @@
           name="feedback"
           method="post"
           enctype="multipart/form-data"
-          action="/e/enews/index.php"
           onsubmit="return checkForm();"
+          action="https://formspree.io/f/xeqwzeae"
+          method="POST"
         >
           <input name="enews" type="hidden" value="AddFeedback" />
           <input type="hidden" name="bid" value="1" />
@@ -200,24 +201,26 @@
         </form>
         <script>
           $(function () {
+            const isEN = localStorage.getItem('language') == "EN";
+
             $('#tj').click(function () {
-              //alert(1)
+              const language = window.p
               if ($('#names').val() == '') {
-                alert('请输入您的姓名！');
+                alert(isEN ? 'Please enter your name! ' : '请输入您的姓名！');
                 $('#names').focus();
                 return false;
               }
               if ($('#mycall').val() == '') {
-                alert('请输入你的手机！');
+                alert(isEN ? 'Please enter your mobile number! ' : '请输入你的手机号！');
                 $('#mycall').focus();
                 return false;
               }
               if ($('#mail').val() == '') {
-                alert('请输入电子邮箱!');
+                alert(isEN ? 'Please enter your email address! ' : '请输入电子邮箱!');
                 return false;
               }
               if ($('#saytext').val() == '') {
-                alert('请输入留言内容！');
+                alert(isEN ? 'Please enter the message content! ' : '请输入留言内容！');
                 return false;
               }
             });

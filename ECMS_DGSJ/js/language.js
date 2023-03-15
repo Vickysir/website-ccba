@@ -1,4 +1,4 @@
-var language = localStorage.getItem('language');
+const language = localStorage.getItem('language');
 
 
 function initial() {
@@ -143,28 +143,25 @@ function translateTabPages(data) {
   switch(path) {
     case "about":
       translateMenu(data.subnav[0]);
-      translateTitle(data.nav[2] + ' - ' + data.title);
+      translateTitle(data.nav[1] + ' - ' + data.title);
       break;
     case "enterprises":
       translateMenu(data.subnav[1]);
-      translateTitle(data.nav[3] + ' - ' + data.title);
+      translateTitle(data.nav[2] + ' - ' + data.title);
       break;
     case "news":
       translateMenu(data.subnav[2]);
-      translateTitle(data.nav[4] + ' - ' + data.title);
-      break;
-    case "contact":
-      translateContact(data.contact);
-      translateTitle(data.nav[6] + ' - ' + data.title);
+      translateTitle(data.nav[3] + ' - ' + data.title);
       break;
     case "chineseSchool":
       $('.clumb-title h3').each(function (index) {
         $(this).text(data.nav[5]);
       });
-      translateTitle(data.nav[5] + ' - ' + data.title);
+      translateTitle(data.nav[4] + ' - ' + data.title);
       break;
-    case 'membership':
-      translateTitle(data.nav[1] + ' - ' + data.title);
+    case "contact":
+      translateContact(data.contact);
+      translateTitle(data.nav[5] + ' - ' + data.title);
       break;
     default:
       translateTitle(data.title);
