@@ -243,8 +243,8 @@ $(function () {
       $(".switch-language").hide();
 
       $(".pcnavmenubtn").show();
-      $(".mobile-language-en").show();
-      $(".mobile-language-cn").show();
+      localStorage.getItem("language") == "CN" ? $(".mobile-language-en").show() : $(".mobile-language-cn").show();
+      
       $(".header-nav").hide();
 
       // $(".header-nav,.search-con").unbind("mouseenter");

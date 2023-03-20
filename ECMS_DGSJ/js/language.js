@@ -24,10 +24,14 @@ function initial() {
 
   $('.mobile-language-cn').eq(0).on('click', function () {
     cnSelect();
+    $('.mobile-language-cn').hide();
+    $('.mobile-language-en').show();
   });
   
   $('.mobile-language-en').eq(0).on('click', function () {
     enSelect();
+    $('.mobile-language-en').hide();
+    $('.mobile-language-cn').show();
   });
 }
 
@@ -146,11 +150,10 @@ function translateTabPages(data) {
       translateTitle(data.nav[1] + ' - ' + data.title);
       break;
     case "enterprises":
-      translateMenu(data.subnav[1]);
       translateTitle(data.nav[2] + ' - ' + data.title);
       break;
     case "news":
-      translateMenu(data.subnav[2]);
+      translateMenu(data.subnav[1]);
       translateTitle(data.nav[3] + ' - ' + data.title);
       break;
     case "chineseSchool":
@@ -171,5 +174,3 @@ function translateTabPages(data) {
 $(function() {
   initial();
 })
-
-

@@ -6,14 +6,19 @@ class NewsItem extends HTMLElement {
   connectedCallback() {
     const templatElem = document.getElementById('news-item');
     const content = templatElem.content.cloneNode(true);
+    const url = this.getAttribute(`${prefix}src`);
+
     content.querySelector('a').href = this.getAttribute(`${prefix}href`);
     content.querySelector('a').title = this.getAttribute(`${prefix}title`);
-    content.querySelector('img').src = this.getAttribute(`${prefix}src`);
-    content.querySelector('img').alt = this.getAttribute(`${prefix}title`);
+    // content.querySelector('img').src = this.getAttribute(`${prefix}src`);
+    // content.querySelector('img').alt = this.getAttribute(`${prefix}title`);
     content.querySelector('h3').textContent = this.getAttribute(`${prefix}title`);
     content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
     content.querySelector('.desc').textContent = this.getAttribute(`${prefix}desc`);
-
+    content.querySelector('.news-img').style.backgroundImage = `url('${url}')`;
+    content.querySelector('.news-img').style.backgroundSize = 'cover';
+    content.querySelector('.news-img').style.backgroundPosition =
+      'center center';
     this.appendChild(content); 
   }
 }

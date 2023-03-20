@@ -6,6 +6,7 @@ class HomeNewsItem extends HTMLElement {
   connectedCallback() {
     const templatElem = document.getElementById('home-news-item');
     const content = templatElem.content.cloneNode(true);
+    const url = this.getAttribute(`${prefix}src`);
     content.querySelector('a').href = this.getAttribute(`${prefix}href`);
     content.querySelector('a').title = this.getAttribute(`${prefix}title`);
     content.querySelector('img').src = this.getAttribute(`${prefix}src`);
@@ -13,6 +14,10 @@ class HomeNewsItem extends HTMLElement {
     content.querySelector('.text').textContent = this.getAttribute(`${prefix}title`);
     content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
   
+    content.querySelector('.pro-img').style.backgroundImage = `url('${url}')`;
+    content.querySelector('.pro-img').style.backgroundSize = 'cover';
+    content.querySelector('.pro-img').style.backgroundPosition =
+      'center center';
     this.appendChild(content); 
   }
 }

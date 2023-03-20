@@ -13,22 +13,12 @@
       "Membership"
     ],
     [
-      "Restaurant",
-      "Hotel",
-      "other"
-    ],
-    [
       "Association News",
       "Announcement",
       "News"
     ]
   ],
   "more": "MORE",
-  "enterprises": [
-    "Restaurant",
-    "Hotel",
-    "Other"
-  ],
   "chinese": ["Chinese School"],
   "contact": {
     "title": ["Contact Us", "Message Feedback"],

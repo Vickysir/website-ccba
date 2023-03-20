@@ -860,7 +860,7 @@ header {
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
-  z-index: 39;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -944,6 +944,18 @@ header.shadow {
   position: relative;
   border-bottom: 1px solid #898989;
   padding: 0 10px;
+}
+
+.header-nav .mobile-language {
+  padding: 20px 10px 6px;
+  text-align: right;
+  font-size: larger;
+  text-decoration: underline;
+}
+
+.header-nav .mobile-language .mobile-language-en,
+.header-nav .mobile-language .mobile-language-cn {
+  display: none;
 }
 
 .header-nav li h3 {
@@ -1167,11 +1179,6 @@ header.shadow {
   display: none;
 }
 
-/* .mobile-language-en {
-  display: none;
-}
-.mobile-language-cn, */
-
 
 .switch-language .language-red {
   color: #d82019;
@@ -1294,6 +1301,9 @@ header.shadow {
   .logo img {
     display: block;
     height: 70px;
+  }
+  .header-nav .mobile-language {
+    display: none;
   }
 
   .header-nav li h3 {
@@ -1474,10 +1484,6 @@ header.shadow {
     border-left: 1px solid #eaeaea;
     padding: 0 27px;
   }
-  .mobile-language-en,
-  .mobile-language-cn {
-    display: block;
-  }
   
   .switch-language {
     /* display: flex; */
@@ -1593,12 +1599,6 @@ header.shadow {
 
   .header-right {
     padding-right: 51px;
-  }
-
-  .headsearch,
-  .headcompany,
-  .headlanguage {
-    padding: 0 5px;
   }
 }
 
@@ -9870,7 +9870,8 @@ body {
 .pages {
   clear: both;
   margin: 0 auto;
-  padding-top: 52px;
+  padding-top: 20px;
+  padding-bottom: 32px;
   overflow: hidden;
   text-align: center;
   font-size: 14px;

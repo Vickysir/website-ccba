@@ -13,7 +13,7 @@ class Card extends HTMLElement {
     // content.querySelector('img').src = this.getAttribute(`${prefix}src`);
     // content.querySelector('img').alt = this.getAttribute(`${prefix}title`);
     content.querySelector('.pro-img').style.height = '150px';
-    content.querySelector('.pro-img').style.width = '275px';
+    // content.querySelector('.pro-img').style.width = '275px';
     content.querySelector('.pro-img').style.backgroundImage = `url('${url}')`;
     content.querySelector('.pro-img').style.backgroundSize = 'cover';
     content.querySelector('.pro-img').style.backgroundPosition =

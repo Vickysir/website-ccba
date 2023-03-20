@@ -1,59 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="renderer" content="webkit" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
-    <title>联系我们 - 爱尔兰科克华人商会</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../ECMS_DGSJ/css/aswiper.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../ECMS_DGSJ/css/animate.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
-    <script
-      type="text/javascript"
-      src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"
-    ></script>
-  </head>
 
-  <body>
-    <!--头部开始-->
-    <header id="head"></header>
-    <!--头部结束-->
-    <div class="headsideNav">
-      <a href="javascript:;" class="slide-colse"></a>
-      <a>
-        <img
-          src="../ECMS_DGSJ/images/logo.png"
-          alt="爱尔兰科克华人商会"
-          title="爱尔兰科克华人商会"
-      /></a>
-      <div class="slide-nav"></div>
-    </div>
-    <a href="javascript:;" class="exit-off-canvas"></a>
-    <div class="inside-banner">
-      <img src="../ECMS_DGSJ/images/1569473641.jpg" />
-    </div>
-    <div class="full-inside-subnav">
-      <!-- <div class="commonweb clearfix">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="renderer" content="webkit" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <link rel="icon" href="../ECMS_DGSJ/images/logo.ico" type="img/x-ico" />
+  <title>联系我们 - 爱尔兰科克华人商会</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/aswiper.min.css" />
+  <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+  <script type="text/javascript" src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"></script>
+  <style>
+    .container {
+
+      background-color: #fff;
+      padding: 20px;
+    }
+    #msg {
+      width: 100%;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+  <style>
+    /* 点击显示对话框style */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 25%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 666;
+      overflow: hidden;
+      -webkit-overflow-scrolling: touch;
+      outline: 0;
+    }
+    .modal-open .modal {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .modal-dialog {
+      position: relative;
+      width: auto;
+      margin: 10px;
+    }
+    .modal-content {
+      position: relative;
+      background-color: #fff;
+      border: 1px solid #999;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      outline: 0;
+      -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    }
+    .modal-header {
+      min-height: 16.43px;
+      padding: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+    }
+    .modal-header .close {
+        display: inline-block;
+        width: 16px;
+        height: 2px;
+        background: #333;
+        transform: rotate(45deg);
+    }
+
+    .modal-header .close::after  {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 2px;
+        background: #333;
+        transform: rotate(-90deg);
+    }
+    .modal-title {
+      margin: 0;
+      line-height: 1.42857143;
+    }
+    .modal-body {
+      position: relative;
+      padding: 15px;
+    }
+    .modal-scrollbar-measure {
+      position: absolute;
+      top: -9999px;
+      width: 50px;
+      height: 50px;
+      overflow: scroll;
+    }
+    @media (min-width: 768px) {
+      .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+      }
+      .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+      .modal-sm {
+        width: 300px;
+      }
+      .modal-body {
+        position: relative;
+        padding: 20px;
+      }
+    }
+    @media (min-width: 992px) {
+      .modal-lg {
+        width: 900px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--头部开始-->
+  <header id="head"></header>
+  <!--头部结束-->
+  <div class="headsideNav">
+    <a href="javascript:;" class="slide-colse"></a>
+    <a>
+      <img src="../ECMS_DGSJ/images/logo.png" alt="爱尔兰科克华人商会" title="爱尔兰科克华人商会" /></a>
+    <div class="slide-nav"></div>
+  </div>
+  <a href="javascript:;" class="exit-off-canvas"></a>
+  <div class="inside-banner">
+    <img src="../ECMS_DGSJ/images/1569473641.jpg" />
+  </div>
+  <div class="full-inside-subnav">
+    <!-- <div class="commonweb clearfix">
       <div class="inside-subnav">
         <h3 class="channel-title">联系我们</h3>
         <div class="subnav clearfix">
@@ -69,195 +160,215 @@
         </div>
       </div>
     </div> -->
+  </div>
+  <div class="common-clumb-min commonweb clearfix">
+    <div class="clumb-title">
+      <h3 class="cn font22">联系我们</h3>
+    </div>
+  </div>
+  <div class="contact-minbox commonweb padtb">
+    <div class="contact-dl clearfix">
+      <div class="thumb">
+        <img src="../ECMS_DGSJ/images/contact.jpg" />
+      </div>
+      <div class="infor">
+        <h3 class="font24">爱尔兰科克华人商会</h3>
+        <p class="PS clearfix" style="font-size: 16px">
+          <span class="name">联系人：</span>
+          <span class="text">Zheng</span>
+        </p>
+        <p class="PS clearfix" style="font-size: 16px">
+          <span class="name">电话：</span>
+          <span class="text">+353 (087)7840211</span>
+        </p>
+        <p class="PS clearfix" style="font-size: 16px">
+          <span class="name">网址：</span>
+          <span class="text">www.ccba.ie</span>
+        </p>
+        <p class="PS clearfix" style="font-size: 16px">
+          <span class="name">邮件：</span>
+          <span class="text">info@ccba.ie</span>
+        </p>
+        <p class="PS clearfix" style="font-size: 16px">
+          <span class="name">地址：</span>
+          <span class="text">
+            <span style="white-space: normal">13 Daltons Ave, Cornmarket street, Cork, Ireland</span></span>
+        </p>
+      </div>
     </div>
     <div class="common-clumb-min commonweb clearfix">
       <div class="clumb-title">
-        <h3 class="cn font22">联系我们</h3>
+        <h3 class="cn font22">留言反馈</h3>
       </div>
     </div>
-    <div class="contact-minbox commonweb padtb">
-      <div class="contact-dl clearfix">
-        <div class="thumb">
-          <img src="../ECMS_DGSJ/images/contact.jpg" />
+    <div class="Comprepairform commonweb padtb" style="position:relative">
+      <form class="form-horizontal" action="https://formspree.io/f/xoqznqkq" method="post" name="feedback" enctype="multipart/form-data">
+        <input name="enews" type="hidden" value="AddFeedback" />
+        <input type="hidden" name="bid" value="1" />
+        <input type="hidden" name="ecmsfrom" value="/" />
+        <div class="Comprepair">
+          <ul class="clearfix">
+            <li>
+              <label class="clearfix">
+                <span style="display: inline-block; width: 100px">
+                  <em>
+                    <font style="color: red">*</font>
+                  </em>您的姓名：</span>
+                <input type="text" name="title" id="names" value="" class="inputext" placeholder="" /></label>
+            </li>
+            <li>
+              <label class="clearfix">
+                <span style="display: inline-block; width: 100px">
+                  <em>
+                    <font style="color: red">*</font>
+                  </em>您的电话：</span>
+                <input type="text" name="mycall" id="mycall" value="" class="inputext" placeholder="" /></label>
+            </li>
+            <li>
+              <label class="clearfix">
+                <span style="display: inline-block; width: 100px">
+                  <em></em>您的地址：</span>
+                <input type="text" name="address" id="address" value="" class="inputext" placeholder="" /></label>
+            </li>
+            <li>
+              <label class="clearfix">
+                <span style="display: inline-block; width: 100px">
+                  <em>
+                    <font style="color: red">*</font>
+                  </em>联系邮箱：</span>
+                <input type="text" name="email" id="email" value="" class="inputext" placeholder="" /></label>
+            </li>
+            <li class="litextarea">
+              <label class="clearfix">
+                <span style="display: inline-block; width: 100px">
+                  <em>
+                    <font style="color: red">*</font>
+                  </em>留言内容：</span>
+                <textarea name="saytext" id="saytext"></textarea>
+              </label>
+            </li>
+            <li class="lisubmit">
+              <label class="clearfix">
+                <input type="button" value="提交" class="submit" id="tj1" />
+                <input type="submit" value="提交" class="submit" id="tj" style="display: none;" />
+              </label>
+            </li>
+          </ul>
         </div>
-        <div class="infor">
-          <h3 class="font24">爱尔兰科克华人商会</h3>
-          <p class="PS clearfix" style="font-size: 16px">
-            <span class="name">联系人：</span>
-            <span class="text">Zheng</span>
-          </p>
-          <p class="PS clearfix" style="font-size: 16px">
-            <span class="name">电话：</span>
-            <span class="text">+353 (087)7840211</span>
-          </p>
-          <p class="PS clearfix" style="font-size: 16px">
-            <span class="name">网址：</span>
-            <span class="text">www.ccba.ie</span>
-          </p>
-          <p class="PS clearfix" style="font-size: 16px">
-            <span class="name">邮件：</span>
-            <span class="text">info@ccba.ie</span>
-          </p>
-          <p class="PS clearfix" style="font-size: 16px">
-            <span class="name">地址：</span>
-            <span class="text">
-              <span style="white-space: normal"
-                >13 Daltons Ave, Cornmarket street, Cork, Ireland</span
-              ></span
-            >
-          </p>
-        </div>
-      </div>
-      <div class="common-clumb-min commonweb clearfix">
-        <div class="clumb-title">
-          <h3 class="cn font22">留言反馈</h3>
-        </div>
-      </div>
-      <div class="Comprepairform commonweb padtb">
-        <form
-          class="form-horizontal"
-          name="feedback"
-          method="post"
-          enctype="multipart/form-data"
-          onsubmit="return checkForm();"
-          action="https://formspree.io/f/xeqwzeae"
-          method="POST"
-        >
-          <input name="enews" type="hidden" value="AddFeedback" />
-          <input type="hidden" name="bid" value="1" />
-          <input type="hidden" name="ecmsfrom" value="/" />
-          <div class="Comprepair">
-            <ul class="clearfix">
-              <li>
-                <label class="clearfix">
-                  <span style="display: inline-block; width: 100px">
-                    <em> <font style="color: red">*</font> </em>您的姓名：</span
-                  >
-                  <input
-                    type="text"
-                    name="title"
-                    id="names"
-                    value=""
-                    class="inputext"
-                    placeholder=""
-                /></label>
-              </li>
-              <li>
-                <label class="clearfix">
-                  <span style="display: inline-block; width: 100px">
-                    <em> <font style="color: red">*</font> </em>您的电话：</span
-                  >
-                  <input
-                    type="text"
-                    name="mycall"
-                    id="mycall"
-                    value=""
-                    class="inputext"
-                    placeholder=""
-                /></label>
-              </li>
-              <li>
-                <label class="clearfix">
-                  <span style="display: inline-block; width: 100px">
-                    <em></em>您的地址：</span
-                  >
-                  <input
-                    type="text"
-                    name="address"
-                    id="address"
-                    value=""
-                    class="inputext"
-                    placeholder=""
-                /></label>
-              </li>
-              <li>
-                <label class="clearfix">
-                  <span style="display: inline-block; width: 100px">
-                    <em> <font style="color: red">*</font> </em>联系邮箱：</span
-                  >
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    value=""
-                    class="inputext"
-                    placeholder=""
-                /></label>
-              </li>
-              <li class="litextarea">
-                <label class="clearfix">
-                  <span style="display: inline-block; width: 100px">
-                    <em> <font style="color: red">*</font> </em>留言内容：</span
-                  >
-                  <textarea name="saytext" id="saytext"></textarea>
-                </label>
-              </li>
-              <li class="lisubmit">
-                <label class="clearfix">
-                  <input type="submit" value="提交" class="submit" id="tj"/></label>
-              </li>
-            </ul>
+      </form>
+      <!-- 点击显示对话框 -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">验证通过后提交</h4>
+              <div style="display: flex; align-items: center;">
+                <div class="close" onclick="$('#myModal').hide();" ></div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div id="captcha"></div>
+                <div id="msg"></div>
+              </div>
+            </div>
           </div>
-        </form>
-        <script>
-          $(function () {
-            const isEN = localStorage.getItem('language') == "EN";
-
-            $('#tj').click(function () {
-              const language = window.p
-              if ($('#names').val() == '') {
-                alert(isEN ? 'Please enter your name! ' : '请输入您的姓名！');
-                $('#names').focus();
-                return false;
-              }
-              if ($('#mycall').val() == '') {
-                alert(isEN ? 'Please enter your mobile number! ' : '请输入你的手机号！');
-                $('#mycall').focus();
-                return false;
-              }
-              if ($('#mail').val() == '') {
-                alert(isEN ? 'Please enter your email address! ' : '请输入电子邮箱!');
-                return false;
-              }
-              if ($('#saytext').val() == '') {
-                alert(isEN ? 'Please enter the message content! ' : '请输入留言内容！');
-                return false;
-              }
-            });
-          });
-        </script>
-      </div>
+        </div>
     </div>
-    <!--底部开始-->
-    <footer class="footer" id="foot"></footer>
-    <!--底部结束-->
+  </div>
+  <!--底部开始-->
+  <footer class="footer" id="foot"></footer>
+  <!--底部结束-->
 
-    <a class="zdsbacktop" href="javascript:"></a>
-    <script>
-      $('#head').load('../head.html');
-      $('#foot').load('../foot.html');
-    </script>
-    <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
-    <script
-      type="text/javascript"
-      src="../ECMS_DGSJ/js/jquery.countup.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../ECMS_DGSJ/js/swiper.jquery.min.js"
-    ></script>
-    <script type="text/javascript" src="../ECMS_DGSJ/js/wow.min.js"></script>
-    <script>
-      var wow = new WOW({
-        boxClass: 'wow',
-        animateClass: 'animated',
-        offset: 0,
-        mobile: true,
-        live: true,
+  <a class="zdsbacktop" href="javascript:"></a>
+  <script>
+    $('#head').load('../head.html');
+    $('#foot').load('../foot.html');
+  </script>
+  <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
+  <script type="text/javascript" src="../ECMS_DGSJ/js/jquery.countup.min.js"></script>
+  <script type="text/javascript" src="../ECMS_DGSJ/js/swiper.jquery.min.js"></script>
+  <script type="text/javascript" src="../ECMS_DGSJ/js/wow.min.js"></script>
+  <script src="../ECMS_DGSJ/js/jigsaw.min.js"></script>
+  <script>
+    var wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: true,
+      live: true,
+    });
+    wow.init();
+  </script>
+  <script>
+    if (!window.jigsaw) {
+    document.write('<script src="../ECMS_DGSJ/js/jigsaw.min.js"><\/script>')
+    }
+  </script>
+  <script>
+
+    const vifiyCaptcha = () => new Promise((resolve, reject) => {
+      // 删除所有子节点
+      const isEN = localStorage.getItem('language') == "EN";
+      while (document.getElementById('captcha').hasChildNodes()) {
+        document.getElementById('captcha').removeChild(document.getElementById('captcha').firstChild);
+      }
+      jigsaw.init({
+        el: document.getElementById('captcha'),
+        onSuccess: function() {
+          document.getElementById('msg').innerHTML = isEN ? 'Verification successed!' : '验证成功!'
+          setTimeout(() => {
+            $('#myModal').hide();
+            resolve(true);
+          }, 1000);
+        },
+        onFail: function () {
+          document.getElementById('msg').innerHTML = isEN ? 'Verification failed, please try again!' : '验证失败，请重试！'
+          // setTimeout(() => {
+          //   document.getElementById('msg').innerHTML = ' '
+          // }, 1000);
+        },
+        onRefresh: function () {
+        document.getElementById('msg').innerHTML = ' '
+      }
       });
-      wow.init();
-    </script>
-    <script src="../ECMS_DGSJ/js/layout.js"></script>
-    <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
-  </body>
+      $('#myModal').show();
+    })
+  
+    $(function () {
+      $('#tj1').click(function () {
+        vifiyCaptcha().then(() => {
+          $('#tj').click();
+        });
+        const isEN = localStorage.getItem('language') == "EN";
+        if ($('#names').val() == '') {
+          alert(isEN ? 'Please enter your name! ' : '请输入您的姓名！');
+          $('#names').focus();
+          return false;
+        }
+        if ($('#mycall').val() == '') {
+          alert(isEN ? 'Please enter your mobile number! ' : '请输入你的手机号！');
+          $('#mycall').focus();
+          return false;
+        }
+        if ($('#mail').val() == '') {
+          alert(isEN ? 'Please enter your email address! ' : '请输入电子邮箱!');
+          $('#mail').focus();
+          return false;
+        }
+        if ($('#saytext').val() == '') {
+          alert(isEN ? 'Please enter the message content! ' : '请输入留言内容！');
+          $('#saytext').focus();
+          return false;
+        }
+        vifiyCaptcha().then(() => {
+          $('#tj').click();
+        });
+      });
+    });
+  </script>
+  <script src="../ECMS_DGSJ/js/layout.js"></script>
+  <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
+</body>
+
 </html>
