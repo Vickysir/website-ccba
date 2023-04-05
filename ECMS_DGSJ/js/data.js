@@ -5,32 +5,24 @@ const partnerData = [
     imgPwd: './ECMS_DGSJ/images/partner-1.png',
     id: 1,
   },
-  // { 'title': '中华全国归国华侨联', 'href': 'http://www.chinaql.org', 'imgPwd': './ECMS_DGSJ/images/partner-2.png', 'id': 2 },
-  // { 'title': '中国侨网', 'href': 'http://www.chinaqw.com', 'imgPwd': './ECMS_DGSJ/images/partner-3.jpg', 'id': 3 },
-
-  // {
-  //   title: '爱尔兰华人专业人士',
-  //   href: 'http://acpi.ie',
-  //   imgPwd: './ECMS_DGSJ/images/partner-5.jpg',
-  //   id: 5,
-  // },
   {
-    title: '爱尔兰福建商会',
-    href: 'https://fujian.ie',
-    imgPwd: './ECMS_DGSJ/images/partner-6.png',
-    id: 6,
+    title: '中华全国归国华侨联',
+    href: 'http://www.chinaql.org',
+    imgPwd: './ECMS_DGSJ/images/partner-2.png',
+    id: 2,
   },
-  // { 'title': '爱尔兰新岛传媒', 'href': 'https://www.0086.ie', 'imgPwd': './ECMS_DGSJ/images/partner-7.png', 'id': 7 },
-  // {
-  //   title: '科克网',
-  //   href: 'https://www.wearecork.ie',
-  //   imgPwd: './ECMS_DGSJ/images/partner-8.png',
-  //   id: 8,
-  // },
-
-  // 文字白
-  // { 'title': '科克市政厅', 'href': 'https://www.corkcity.ie', 'imgPwd': './ECMS_DGSJ/images/partner-9.png', 'id': 9 },
-
+  {
+    title: '中国侨网',
+    href: 'http://www.chinaqw.com',
+    imgPwd: './ECMS_DGSJ/images/partner-3.png',
+    id: 3,
+  },
+  {
+    title: '爱尔兰华人专业人士',
+    href: 'http://acpi.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-5.png',
+    id: 5,
+  },
   {
     title: '科克商业协会',
     href: 'http://corkbusiness.ie',
@@ -38,26 +30,54 @@ const partnerData = [
     id: 10,
   },
   {
+    title: '爱尔兰福建商会',
+    href: 'https://fujian.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-6.png',
+    id: 6,
+  },
+  {
+    title: '科克市政厅',
+    href: 'https://www.corkcity.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-9.png',
+    id: 9,
+  },
+  {
     title: '科克大学',
     href: 'https://www.ucc.ie',
-    imgPwd: './ECMS_DGSJ/images/partner-11.jpg',
+    imgPwd: './ECMS_DGSJ/images/partner-11.png',
     id: 11,
   },
   {
     title: '科克理工学院',
     href: 'https://www.cit.ie',
-    imgPwd: './ECMS_DGSJ/images/partner-12.jpg',
+    imgPwd: './ECMS_DGSJ/images/partner-12.png',
     id: 12,
+  },
+  {
+    title: '科克网',
+    href: 'https://www.wearecork.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-8.png',
+    id: 8,
   },
   {
     title: '科克华文学校',
     href: 'http://sites.google.com/view/corkchinese/',
-    imgPwd: './ECMS_DGSJ/images/partner-4.jpg',
+    imgPwd: './ECMS_DGSJ/images/partner-4.png',
     id: 4,
   },
-  // { 'title': '科克格里菲斯学院', 'href': 'https://www.griffith.ie', 'imgPwd': './ECMS_DGSJ/images/partner-13.png', 'id': 13 },
+  {
+    title: '科克格里菲斯学院',
+    href: 'https://www.griffith.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-13.png',
+    id: 13,
+  },
+  {
+    title: '爱尔兰新岛传媒',
+    href: 'https://www.0086.ie',
+    imgPwd: './ECMS_DGSJ/images/partner-7.png',
+    id: 7,
+  },
 ];
-
 
 const restaurantEnterprisesData = [
   {
@@ -576,6 +596,16 @@ const announcementData = [
 
 const shdtData = [
   {
+    time: '2022-10-10',
+    title: '爱尔兰科克华人商会第三届理事会就职典礼胜利举行',
+    href: '',
+    imgPwd: './ECMS_DGSJ/images/news/shdt-13-1.jpg',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc: '金秋送爽，硕果飘香，2022年10月10日，爱尔兰科克华人商会第三届理事会就职典礼在科克市五星级高尔夫度假酒店Fota圆满举行。出席本次庆典的嘉宾和单位有科克郡政府郡长 Danny Collins 议员，Fota 酒店集团 Julie Kelly 女士，爱尔兰宋庆龄基金会 Soong Ching Ling Foundation Ireland 陈敏琪女士等二十余家机构和中外友好人士近两百余人。科克市政府，中国驻爱尔兰大使馆，以及科克华人商会在中国的代表处也发来了祝贺的视频。',
+    id: 'shdt-13',
+  },
+  {},
+  {
     time: '2020-11-09',
     title: '科克华人商会代表团参加第11届欧洲论坛',
     href: '/a/news/shdt/123.html',
@@ -586,7 +616,7 @@ const shdtData = [
   },
   {
     time: '2020-01-10',
-    title: '第六届世界闽商大会',
+    title: '第六届世界闽商大会222',
     href: '/a/news/shdt/124.html',
     imgPwd: './ECMS_DGSJ/images/news/shdt-2-2.jpg',
     img_src: '../uploads/allimg/200110/1-200110101241646.jpg',
@@ -595,13 +625,14 @@ const shdtData = [
   },
   {
     time: '2020-01-10',
-    title: '爱尔兰科克市市长接见科克市华文学校师生以及',
+    title: '爱尔兰科克市市长接见科克市华文学校师生',
     href: '/a/news/shdt/122.html',
     imgPwd: './ECMS_DGSJ/images/news/shdt-3-1.jpg',
     img_src: '../uploads/allimg/200110/1-200110100J9396.jpg',
     desc: '科克市华文学校，成立于草长莺飞的季节。成立两个月以来，中文语言教学分三个等级共十个班次有条不紊的推进，课外辅导课、中国传统武术班、绘画特长班、钢琴基础班等兴趣课也得到了学生家长的热烈响应，正如窗外五月的爱尔兰，一切都是生气勃勃、生机盎然。',
     id: 'shdt-3',
   },
+  {},
   {
     time: '2020-01-10',
     title: '爱尔兰科克华人商会成立仪式',
@@ -611,6 +642,7 @@ const shdtData = [
     desc: '爱尔兰科克华人商会成立仪式于科克市市政厅圆满举行\n    2018年9月23日，爱尔兰科克华人商会成立仪式暨首届理事会就职典礼在科克市市政厅大礼堂圆满举行。本次晚会由中国驻爱尔兰大使馆，科克市政府, 科克华人商会，新岛周报，中爱传媒协会联合主办。',
     id: 'shdt-4',
   },
+  {},
   {
     time: '2020-01-10',
     title: '爱尔兰科克华人商会代表团访问大连',
@@ -796,4 +828,3 @@ const newsData = [
 ];
 
 const allDataForNews = [...shdtData, ...announcementData, ...newsData];
-

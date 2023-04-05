@@ -71,7 +71,7 @@ const shdtData = [
   },
   {
     time: '2020-01-10',
-    title: '爱尔兰科克市市长接见科克市华文学校师生以及',
+    title: '爱尔兰科克市市长接见科克市华文学校师生',
     href: '/a/news/shdt/122.html',
     imgPwd: '../ECMS_DGSJ/images/news/shdt-3-1.jpg',
     img_src: '../uploads/allimg/200110/1-200110100J9396.jpg',
