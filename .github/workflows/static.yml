@@ -9,19 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     # 检出代码
+      # 检出代码
       - uses: actions/checkout@v1
+      # 开始部署到oss
       - uses: manyuanrong/setup-ossutil@master
         with:
           endpoint: 'oss-cn-hongkong.aliyuncs.com'
           access-key-id: ${{ secrets.ACCESSKEY_ID_OSS }}
           access-key-secret: ${{ secrets.ACCESSKEY_SECRET_OSS }}
       - name: 删除冗余文件
-        run: ossutil rm oss://ccbaie-hk/oss -rf
-      - run: ossutil -h
-      - run: ossutil ls
+        run: ossutil rm oss://ccbaie-hk -rf
       - name: 复制文件到阿里云OSS
-        run: ossutil cp -rf . oss://ccbaie-hk/oss/
-      # - name: Deply To OSS
-        # run: ossutil cp liuyan oss://ccbaie-hk/ -rf
-
+        run: ossutil cp -rf . oss://ccbaie-hk/
