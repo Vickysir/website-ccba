@@ -1,18 +1,17 @@
 name: deploy oss
 
-on:   
+on:
   push:
     branches: ['oss']
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
     steps:
-    - name: setup aliyun oss
-    - uses: manyuanrong/setup-ossutil@v1.0
-      with:
-        endpoint: "oss-cn-hongkong.aliyuncs.com"
-        access-key-id: ${{ secrets.ACCESSKEY_ID_OSS }}
-        access-key-secret: ${{ secrets.ACCESSKEY_SECRET_OSS }}
-    - name: Deply To OSS
-      run: ossutil cp public oss://ccbaie-hk/ -rf
+      - name: setup aliyun oss
+      - uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          endpoint: 'oss-cn-hongkong.aliyuncs.com'
+          access-key-id: ${{ secrets.ACCESSKEY_ID_OSS }}
+          access-key-secret: ${{ secrets.ACCESSKEY_SECRET_OSS }}
+      - name: Deply To OSS
+        run: ossutil cp public oss://ccbaie-hk/ -rf
