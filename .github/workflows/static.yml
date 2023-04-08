@@ -6,6 +6,8 @@ on:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
       - name: setup aliyun oss
       - uses: manyuanrong/setup-ossutil@v1.0
