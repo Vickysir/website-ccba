@@ -16,8 +16,10 @@ jobs:
           access-key-secret: ${{ secrets.ACCESSKEY_SECRET_OSS }}
       - name: 删除冗余文件
         run: ossutil rm oss://ccbaie-hk/oss -rf
+      - run: ossutil -h
+      - run: ossutil ls
       - name: 复制文件到阿里云OSS
-        # run: ossutil cp -rf liuyan oss://ccbaie-hk/oss/
+        run: ossutil cp -rf . oss://ccbaie-hk/oss/
       # - name: Deply To OSS
-        run: ossutil cp liuyan oss://ccbaie-hk/ -rf
+        # run: ossutil cp liuyan oss://ccbaie-hk/ -rf
 
