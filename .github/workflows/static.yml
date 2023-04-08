@@ -17,7 +17,7 @@ jobs:
       - name: 删除冗余文件
         run: ossutil rm oss://ccbaie-hk/oss -rf
       - name: 复制文件到阿里云OSS
-        run: ossutil cp -rf ./index.html oss://ccbaie-hk/oss/
+        run: ossutil cp -rf ../index.html oss://ccbaie-hk/oss/
       # - name: Deply To OSS
       #  run: ossutil cp public oss://ccbaie-hk/ -rf
 
