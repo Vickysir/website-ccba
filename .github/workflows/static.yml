@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: manyuanrong/setup-ossutil@v1.0
+      - uses: manyuanrong/setup-ossutil@master
         with:
           endpoint: 'oss-cn-hongkong.aliyuncs.com'
           access-key-id: ${{ secrets.ACCESSKEY_ID_OSS }}
           access-key-secret: ${{ secrets.ACCESSKEY_SECRET_OSS }}
-      - name: Deply To OSS
-        run: ossutil cp public oss://ccbaie-hk/ -rf
+      - name: 删除冗余文件
+        run: ossutil rm oss://ccbaie-hk/oss -rf
+      - name: 复制文件到阿里云OSS
+       run: ossutil cp -rf ./index.html oss://ccbaie-hk/oss/
+      # - name: Deply To OSS
+      #  run: ossutil cp public oss://ccbaie-hk/ -rf
+
