@@ -68,7 +68,7 @@ function renderItems(data) {
 
 function renderEnterprisesItem(data) {
   const parentNode = document.querySelector('#inxenterprises-list1 > ul');
-  data.slice(3, 6).forEach((item, index) => {
+  data.slice(0, 3).forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
@@ -85,7 +85,7 @@ function renderEnterprisesItem(data) {
   });
 
   const parentNode2 = document.querySelector('#inxenterprises-list2 > ul');
-  data.slice(9, 12).forEach((item, index) => {
+  data.slice(3, 6).forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
