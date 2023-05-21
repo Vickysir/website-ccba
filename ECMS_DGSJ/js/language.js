@@ -122,7 +122,7 @@ function translateMenu(data) {
 }
 
 function translateContact(data) {
-  const { title, contact, message} = data;
+  const { title, contact,contactValue, message} = data;
   $('.clumb-title h3').each(function (index) {
     $(this).text(title[index])
   });
@@ -130,6 +130,9 @@ function translateContact(data) {
 
   $('.infor p').each(function (index) {
     $(this).find('.name').text(contact[index + 1])
+  })
+  $('.infor p').each(function (index) {
+    $(this).find('.text').text(contactValue[index + 1])
   })
 
   $('.Comprepair span').each(function (index) {

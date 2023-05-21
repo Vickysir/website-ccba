@@ -23,6 +23,7 @@
   "contact": {
     "title": ["Contact Us", "Message Feedback"],
     "contact": ["Chinese Business Associatio", "Contact：", "Tell：", "Web：", "Email：", "Address："],
+    "contactValue": ["","Hongbin Cai"],
     "message": ["Name", "Tell", "Address", "Email", "Content", "Submit"]
   },
   "link": "Links",
