@@ -43,6 +43,15 @@ const announcementData = [
 
 const shdtData = [
   {
+    time: '2023-01-24',
+    title: '2023年科克华人商会新春联欢会',
+    href: '',
+    imgPwd: '../ECMS_DGSJ/images/news/shdt-14-1.jpg',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc:'纳福接祥辞旧岁，张灯结彩迎新春。2023年1月24日,科克华人商会新春联欢会在Fota lsland Resort 欢乐举行',
+    id: 'shdt-14',
+  },
+  {
     time: '2022-10-10',
     title: '爱尔兰科克华人商会第三届理事会就职典礼胜利举行',
     href: '',

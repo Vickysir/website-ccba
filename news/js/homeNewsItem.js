@@ -44,7 +44,7 @@ window.customElements.define('home-enterprises-item', HomeEnterprisesItem);
 
 function renderItems(data) {
   const parentNode = document.querySelector('#inxnews-list1 > ul');
-  data.slice(0, 5).filter((item, index) => !!item.img_src && index != 1).forEach(item => {
+  data.slice(0, 4).filter((item, index) => !!item.img_src ).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
     liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
@@ -55,7 +55,7 @@ function renderItems(data) {
   });
 
   const parentNode2 = document.querySelector('#inxnews-list2 > ul');
-  data.slice(6, 11).filter((item, index) => !!item.img_src && index != 1).forEach(item => {
+  data.slice(4, 8).filter((item, index) => !!item.img_src ).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
     liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);

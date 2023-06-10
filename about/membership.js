@@ -35,61 +35,6 @@ const membershipData = [
 		"id": 6
 	},   
 
-	
-	{
-		"time": "2023-2024",
-		"name": "Jason Cheung",
-		"job": "特邀理事",
-		"id": 7
-	}, {
-		"time": "2023-2024",
-		"name": "Candy Cheung",
-		"job": "特邀理事",
-		"id": 8
-	}, 
-	
-	
-
-	{
-		"time": "2023-2024",
-		"name": "Patrick Ledwidge",
-		"job": "高级顾问",
-		"id": 70
-	},
-
-	{
-		"time": "2023-2024",
-		"name": "王少敏",
-		"job": "政务顾问",
-		"id": 71
-	},
-
-	{
-		"time": "2023-2024",
-		"name": "Thomas Coughlan",
-		"job": "法律顾问",
-		"id": 72
-	},
-
-	{
-		"time": "2023-2024",
-		"name": "郝广波博士",
-		"job": "教育顾问",
-		"id": 73
-	},
-
-	{
-		"time": "2023-2024",
-		"name": "宁可欣",
-		"job": "策划顾问",
-		"id": 74
-	},
-	{
-		"time": "2023-2024",
-		"name": "陈华德会长",
-		"job": "特邀顾问",
-		"id": 75
-	},
 
 
 	{
@@ -301,6 +246,62 @@ const membershipData = [
 		"id": 45
 	}, 
 	
+
+	{
+		"time": "2023-2024",
+		"name": "Jason Cheung",
+		"job": "特邀理事",
+		"id": 7
+	}, {
+		"time": "2023-2024",
+		"name": "Candy Cheung",
+		"job": "特邀理事",
+		"id": 8
+	}, 
+	
+	
+
+	{
+		"time": "2023-2024",
+		"name": "Patrick Ledwidge",
+		"job": "高级顾问",
+		"id": 70
+	},
+
+	{
+		"time": "2023-2024",
+		"name": "王少敏",
+		"job": "政务顾问",
+		"id": 71
+	},
+
+	{
+		"time": "2023-2024",
+		"name": "Thomas Coughlan",
+		"job": "法律顾问",
+		"id": 72
+	},
+
+	{
+		"time": "2023-2024",
+		"name": "郝广波博士",
+		"job": "教育顾问",
+		"id": 73
+	},
+
+	{
+		"time": "2023-2024",
+		"name": "宁可欣",
+		"job": "策划顾问",
+		"id": 74
+	},
+	{
+		"time": "2023-2024",
+		"name": "陈华德会长",
+		"job": "特邀顾问",
+		"id": 75
+	},
+
 	
 	{
 		"time": "2023-2024",
