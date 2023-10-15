@@ -43,6 +43,15 @@ const announcementData = [
 
 const shdtData = [
   {
+    time: '2023-09-19',
+    title: '爱尔兰科克华人中秋晚会暨爱尔兰科克华人商会和科克华文学校成立5周年庆典',
+    href: '',
+    imgPwd: '../ECMS_DGSJ/images/news/shdt-15-1.jpg',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc:'爱尔兰科克华人中秋晚会暨爱尔兰科克华人商会和科克华文学校成立5 周年庆典在爱尔兰科克华人商会林波会长的带领下于2023年9月19日在Fota Island Resort 成功举办！',
+    id: 'shdt-15',
+  },
+  {
     time: '2023-01-24',
     title: '2023年科克华人商会新春联欢会',
     href: '',
