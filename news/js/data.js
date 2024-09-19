@@ -43,6 +43,24 @@ const announcementData = [
 
 const shdtData = [
   {
+    time: '2024-09-09',
+    title: '科克华人商会成功举办了中秋慈善晚宴',
+    href: '',
+    imgPwd: '../ECMS_DGSJ/images/news/shdt-18-4.jpeg',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc:'本次晚宴吸引了众多嘉宾出席，包括中国驻爱尔兰大使馆杨通公参、科克郡副郡长Martin Coughlan、科克华人商会会长林波以及高级顾问Patrick Ledwidge等人',
+    id: 'shdt-18',
+  },
+  {
+    time: '2024-06-16',
+    title: '爱尔兰科克华⼈商会与⼴东省政府代表团商务交流会议',
+    href: '',
+    imgPwd: '../ECMS_DGSJ/images/news/shdt-17-1.png',
+    img_src: '../uploads/allimg/200117/1-20011FUU0926.jpg',
+    desc:'2024年6⽉16⽇，科克华⼈商会与⼴东省政府代表团在商 会办公室举⾏了商务交流会议。此次会议旨在促进爱尔兰与⼴东省之间的经贸合作，探讨双⽅在科技创新和⽣物制药领 域的合作机会。',
+    id: 'shdt-17',
+  },
+  {
     time: '2024-01-16',
     title: '爱尔兰科克华商会会长林波应邀代表科克华商会出席了中国总理李强访问爱尔兰的欢迎仪式',
     href: '',
