@@ -47,7 +47,7 @@ window.customElements.define('home-enterprises-item', HomeEnterprisesItem);
 
 function renderItems(data) {
   const parentNode = document.querySelector('#inxnews-list1 > ul');
-  data.slice(0, 4).forEach(item => {
+  data.slice(0, 8).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
     liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
@@ -56,22 +56,11 @@ function renderItems(data) {
     liNode.setAttribute('class', "swiper-slide wow animated")
     parentNode.appendChild(liNode);
   });
-
-  const parentNode2 = document.querySelector('#inxnews-list2 > ul');
-  data.slice(4, 8).forEach(item => {
-    const liNode = document.createElement("home-news-item");
-    liNode.setAttribute('data-title', item.title);
-    liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
-    liNode.setAttribute('data-time', item.time);
-    liNode.setAttribute('data-src', item.imgPwd);
-    liNode.setAttribute('class', "swiper-slide wow animated")
-    parentNode2.appendChild(liNode);
-  });
 }
 
 function renderEnterprisesItem(data) {
   const parentNode = document.querySelector('#inxenterprises-list1 > ul');
-  data.slice(0, 2).forEach((item, index) => {
+  data.slice(0, 6).forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);

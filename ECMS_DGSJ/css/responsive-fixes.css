@@ -1,11 +1,13 @@
 /* Homepage enterprise cards: predictable responsive layout. */
 .arrivals-wrapper .arrivalsp-min {
+  container-type: inline-size;
   overflow: hidden;
 }
 
 .arrivals-wrapper .arrivalsp-min > .swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 28px;
   align-items: stretch;
   width: 100%;
   transform: none !important;
@@ -13,16 +15,20 @@
 
 .arrivals-wrapper home-enterprises-item.swiper-slide {
   display: block;
-  flex: 0 0 100%;
   width: 100% !important;
   height: auto;
   box-sizing: border-box;
+}
+
+.arrivals-wrapper home-enterprises-item:nth-child(n + 3) {
+  display: none;
 }
 
 .arrivals-wrapper home-enterprises-item > li {
   float: none;
   width: 100% !important;
   height: 100%;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -50,6 +56,18 @@
   -webkit-line-clamp: 2;
 }
 
+@container (min-width: 720px) {
+  .arrivals-wrapper home-enterprises-item:nth-child(-n + 4) {
+    display: block;
+  }
+}
+
+@container (min-width: 1080px) {
+  .arrivals-wrapper home-enterprises-item:nth-child(n) {
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
   .arrivals-wrapper {
     padding-right: 15px;
@@ -57,35 +75,26 @@
   }
 }
 
-@media (min-width: 768px) {
-  .arrivals-wrapper home-enterprises-item.swiper-slide {
-    flex-basis: 50%;
-    width: 50% !important;
-  }
-}
-
-/* Homepage news cards: 1 column on phones, 2 on tablets, 3 on desktop. */
+/* Homepage news cards: add columns automatically as space becomes available. */
 .indxNews-wraper {
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .inxnews-list > .swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
   align-items: stretch;
   width: auto;
-  margin-right: -10px;
-  margin-left: -10px;
   transform: none !important;
 }
 
 .inxnews-list home-news-item.swiper-slide {
   display: block;
-  flex: 0 0 100%;
   width: 100% !important;
   height: auto;
-  padding: 0 10px 20px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -112,16 +121,18 @@
   line-height: 24px;
 }
 
-@media (min-width: 768px) {
-  .inxnews-list home-news-item.swiper-slide {
-    flex-basis: 50%;
-    width: 50% !important;
+@media (max-width: 767px) {
+  .arrivals-wrapper .arrivalsp-min > .swiper-wrapper,
+  .inxnews-list > .swiper-wrapper {
+    gap: 16px;
   }
 }
 
-@media (min-width: 1024px) {
-  .inxnews-list home-news-item.swiper-slide {
-    flex-basis: 33.333333%;
-    width: 33.333333% !important;
-  }
+/* Partner logos keep their original 872:240 aspect ratio at every slide width. */
+.inxpart-list home-partner-item img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 109 / 30;
+  object-fit: contain;
 }
