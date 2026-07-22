@@ -9,12 +9,15 @@ class HomeNewsItem extends HTMLElement {
     const url = this.getAttribute(`${prefix}src`);
     content.querySelector('a').href = this.getAttribute(`${prefix}href`);
     content.querySelector('a').title = this.getAttribute(`${prefix}title`);
-    content.querySelector('img').src = this.getAttribute(`${prefix}src`);
-    content.querySelector('img').alt = this.getAttribute(`${prefix}title`);
+    content.querySelector('img').remove();
     content.querySelector('.text').textContent = this.getAttribute(`${prefix}title`);
     content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
   
-    content.querySelector('.pro-img').style.backgroundImage = `url('${url}')`;
+    if (url) {
+      content.querySelector('.pro-img').style.backgroundImage = `url('${url}')`;
+    } else {
+      content.querySelector('.pro-img').style.backgroundColor = '#f2f2f2';
+    }
     content.querySelector('.pro-img').style.backgroundSize = 'cover';
     content.querySelector('.pro-img').style.backgroundPosition =
       'center center';
@@ -44,7 +47,7 @@ window.customElements.define('home-enterprises-item', HomeEnterprisesItem);
 
 function renderItems(data) {
   const parentNode = document.querySelector('#inxnews-list1 > ul');
-  data.slice(0, 4).filter((item, index) => !!item.img_src ).forEach(item => {
+  data.slice(0, 4).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
     liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
@@ -55,7 +58,7 @@ function renderItems(data) {
   });
 
   const parentNode2 = document.querySelector('#inxnews-list2 > ul');
-  data.slice(4, 8).filter((item, index) => !!item.img_src ).forEach(item => {
+  data.slice(4, 8).forEach(item => {
     const liNode = document.createElement("home-news-item");
     liNode.setAttribute('data-title', item.title);
     liNode.setAttribute('data-href', `./news/detail.html?${item.id}`);
@@ -68,7 +71,7 @@ function renderItems(data) {
 
 function renderEnterprisesItem(data) {
   const parentNode = document.querySelector('#inxenterprises-list1 > ul');
-  data.slice(0, 3).forEach((item, index) => {
+  data.slice(0, 2).forEach((item, index) => {
     const liNode = document.createElement("home-enterprises-item");
     liNode.setAttribute('data-title', item.title);
     // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
@@ -82,22 +85,5 @@ function renderEnterprisesItem(data) {
       liNode.setAttribute('class', "swiper-slide")
     }
     parentNode.appendChild(liNode);
-  });
-
-  const parentNode2 = document.querySelector('#inxenterprises-list2 > ul');
-  data.slice(3, 6).forEach((item, index) => {
-    const liNode = document.createElement("home-enterprises-item");
-    liNode.setAttribute('data-title', item.title);
-    // liNode.setAttribute('data-href', `/enterprises/detail.html?${item.id}`);
-    liNode.setAttribute('data-href', 'javascrit:;');
-    liNode.setAttribute('data-src', item.url);
-    if (index == 0 || index == 2) {
-      liNode.setAttribute('class', "swiper-slide wow fadeInUp")
-    } else if(index == 1) {
-      liNode.setAttribute('class', "swiper-slide wow fadeInDown")
-    } else {
-      liNode.setAttribute('class', "swiper-slide")
-    }
-    parentNode2.appendChild(liNode);
   });
 }
