@@ -28,6 +28,101 @@
       href="../ECMS_DGSJ/css/animate.min.css"
     />
     <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+    <style>
+      .inside-banner.news-12-banner img {
+        width: 100%;
+        height: auto;
+        left: 0;
+        transform: none;
+      }
+
+      @media (max-width: 414px) {
+        .inside-banner.news-12-banner img {
+          width: 100%;
+          height: 120px;
+          max-height: none;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .newscenter-detail {
+        max-width: 1080px;
+      }
+
+      .news-detail-title {
+        padding-bottom: 32px;
+        text-align: center;
+      }
+
+      .news-detail-title .date {
+        display: block;
+        margin-bottom: 14px;
+        padding: 0;
+        background: transparent;
+        color: #888;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .news-detail-title h2 {
+        max-width: 920px;
+        margin: 0 auto;
+        color: #262626;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .news-datail-content .articleInfo {
+        max-width: 920px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #444;
+        font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+        font-size: 18px;
+        line-height: 1.95;
+        letter-spacing: 0.02em;
+      }
+
+      .news-datail-content .articleInfo p {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+
+      .news-datail-content .articleInfo img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 767px) {
+        .news-detail-title {
+          padding-bottom: 22px;
+          text-align: left;
+        }
+
+        .news-detail-title .date {
+          margin-bottom: 12px;
+          font-size: 13px;
+        }
+
+        .news-detail-title h2 {
+          font-size: 26px;
+          line-height: 1.45;
+        }
+
+        .news-datail-content .articleInfo {
+          font-size: 16px;
+          line-height: 1.85;
+          letter-spacing: 0;
+        }
+
+        .news-datail-content .articleInfo p {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
     <script
       type="text/javascript"
       src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"

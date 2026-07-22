@@ -9706,68 +9706,6 @@ body {
     position: relative;
     padding: 0 17px;
   }
-<<<<<<< HEAD
- }
-
- @media(min-width:1024px) {
-   .indxArrivals {
-     padding-top: 57px;
-     padding-bottom: 55px
-   }
-
-   .arrivals-wrapper li:hover img {
-     -webkit-transform: scale(1.03, 1.03);
-     -moz-transform: scale(1.03, 1.03);
-     -ms-transform: scale(1.03, 1.03);
-     -o-transform: scale(1.03, 1.03);
-     transform: scale(1.03, 1.03)
-   }
-
-   .arrivals-wrapper li a {
-     -webkit-transition: all ease .5s;
-     -o-transition: all ease .5s;
-     -moz-transition: all ease .5s;
-     transition: all ease .5s
-   }
-
-   .arrivals-wrapper li .solut-img {
-     overflow: hidden
-   }
-
-   .arrivals-wrapper li .solut-img img {
-     -webkit-transition: all ease .7s;
-     -moz-transition: all ease .7s;
-     -o-transition: all ease .7s;
-     transition: all ease .7s
-   }
-
-   .arrivals-wrapper li .solut-text {
-     padding: 30px 30px 20px
-   }
-
-   .arrivals-wrapper li .solut-text h3 {
-     margin: 0 0 9px
-   }
-
-   .arrivals-wrapper li:hover .solut-text h3 {
-     color: #d82019
-   }
-    .arrivals-wrapper li .solut-img img {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      height: 258px;
-    }
- }
-
- @media(min-width:1400px) {
-   .arrivals-wrapper {
-     padding: 5px 0
-   }
-
-   .indxArrivals .enterprises-tab {
-=======
-
   .header-nav .sub-item:hover h4 a {
     color: #d82019;
   }
@@ -9782,7 +9720,6 @@ body {
   }
 
   .header-nav .sub-item h4 a {
->>>>>>> ac2429db2458fc59a595f94c9c10d16d2eb97b9a
     padding: 0;
     white-space: nowrap;
     -o-text-overflow: ellipsis;

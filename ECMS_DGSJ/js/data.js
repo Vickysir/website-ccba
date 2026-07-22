@@ -668,6 +668,15 @@ const shdtData = [
 ];
 
 const newsData = [
+  {
+    time: '2026-07-21',
+    title: '凝侨心 聚侨力 谋发展——爱尔兰科克华人商会代表出席第十一届世界华侨华人社团联谊大会',
+    href: '',
+    imgPwd: './ECMS_DGSJ/images/news/news-12-1.jpg',
+    img_src: './ECMS_DGSJ/images/news/news-12-1.jpg',
+    desc: '2026年7月13日，第十一届世界华侨华人社团联谊大会在北京隆重开幕。爱尔兰科克华人商会代表林波会长与来自全球140个国家和地区的400多位华侨华人社团负责人齐聚北京，共叙侨情、共商合作、共谋发展。',
+    id: 'news-12',
+  },
   // {
   //   time: '2020-12-01',
   //   title: '【圣诞福利来袭】快来围观爱尔兰政府30项社会福',
@@ -777,4 +786,9 @@ const newsData = [
   },
 ];
 
-const allDataForNews = [...shdtData, ...announcementData, ...newsData];
+const allDataForNews = [
+  newsData[0],
+  ...shdtData,
+  ...announcementData,
+  ...newsData.slice(1),
+];

@@ -15,7 +15,11 @@ class NewsItem extends HTMLElement {
     content.querySelector('h3').textContent = this.getAttribute(`${prefix}title`);
     content.querySelector('span').textContent = this.getAttribute(`${prefix}time`);
     content.querySelector('.desc').textContent = this.getAttribute(`${prefix}desc`);
-    content.querySelector('.news-img').style.backgroundImage = `url('${url}')`;
+    if (url) {
+      content.querySelector('.news-img').style.backgroundImage = `url('${url}')`;
+    } else {
+      content.querySelector('.news-img').style.backgroundColor = '#f2f2f2';
+    }
     content.querySelector('.news-img').style.backgroundSize = 'cover';
     content.querySelector('.news-img').style.backgroundPosition =
       'center center';

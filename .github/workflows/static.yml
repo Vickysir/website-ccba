@@ -10,7 +10,7 @@ jobs:
 
     steps:
       # 检出代码
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       # 开始部署到oss
       - uses: manyuanrong/setup-ossutil@master
         with:
