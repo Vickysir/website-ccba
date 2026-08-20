@@ -28,33 +28,11 @@
       href="../ECMS_DGSJ/css/animate.min.css"
     />
     <link rel="stylesheet" type="text/css" href="../ECMS_DGSJ/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="./membership.css" />
     <script
       type="text/javascript"
       src="../ECMS_DGSJ/js/jquery-1.12.4.min.js"
     ></script>
-    <script>
-      const prefix = 'data-';
-      class Item extends HTMLElement {
-        constructor() {
-          super();
-        }
-        connectedCallback() {
-          const templatElem = document.getElementById('membershipCardTemplate');
-          const content = templatElem.content.cloneNode(true);
-          // content.querySelector('a').href = this.getAttribute(`${prefix}href`);
-          content.querySelector('div > .membership-name').textContent =
-            this.getAttribute(`${prefix}name`);
-          content.querySelector('div > .membership-job').textContent =
-            this.getAttribute(`${prefix}job`);
-          // content.querySelector('a').alt = this.getAttribute(`${prefix}name`);
-          content.querySelector('span').textContent = this.getAttribute(
-            `${prefix}time`
-          );
-          this.appendChild(content);
-        }
-      }
-      window.customElements.define('membership-item', Item);
-    </script>
   </head>
 
   <body>
@@ -94,58 +72,26 @@
     <!-- 子导航开始 -->
     <div class="full-inside-subnav" id="subnav"></div>
     <!-- 子导航结束 -->
-    <div class="Pledge-min commonweb padtb">
-      <div class="Pledetext">
-        <div
-          class="articleList"
-          style="width: 100%; float: left; margin-bottom: 40px"
-        >
-          <template id="membershipCardTemplate">
-            <li
-              style="
-                margin: 0px;
-                padding: 0 0 0 10px;
-                list-style-type: none;
-                border-bottom: 1px dotted #ccc;
-                background: url(../ECMS_DGSJ/images/li_1.jpg) no-repeat left
-                  center;
-                line-height: 50px;
-                font-size: medium;
-              "
-            >
-              <span style="color: #959595; float: right"></span>
-              <div>
-                <span
-                  class="membership-name"
-                  style="width: 150px; display: inline-block"
-                ></span>
-                <span class="membership-job"></span>
-              </div>
-            </li>
-          </template>
-          <ul style="margin: 0px; padding: 0px; list-style-type: none"></ul>
-        </div>
-        <div class="blank clear"></div>
-        <div class="commonweb padtbb">
-          <div class="pages">
-            <ul>
-              <!-- <li><a href="./index.html" id="firstPage">首页</a></li> -->
-              <!-- <li><a href="./index.html?" id="prePage">上一页</a></li> -->
-              <li><a href="./membership.html?1" id="page1">1</a></li>
-              <li><a href="./membership.html?2" id="page2">2</a></li>
-              <li><a href="./membership.html?3" id="page3">3</a></li>
-              <li><a href="./membership.html?4" id="page4">4</a></li>
-              <!-- <li><a href="./index.html?" id="nextPage">下一页</a></li>
-              <li>
-                <a href="./index.html?3" class="c-nav ease moye" id="tailPage"
-                  >尾页</a
-                >
-              </li> -->
-            </ul>
+    <main class="membership-page">
+      <div class="membership-shell">
+        <section class="membership-intro">
+          <div>
+            <p class="membership-kicker">Leadership &amp; Council</p>
+            <h1>第五届理事成员及架构</h1>
           </div>
-        </div>
+          <p class="membership-intro-text">
+            汇聚在科克地区发展的华人企业家与专业人士，共同促进中爱经贸、文化交流与社区合作。
+          </p>
+        </section>
+
+        <section class="membership-leadership" id="membership-leadership"></section>
+        <div id="membership-groups"></div>
+
+        <aside class="membership-advisors">
+          <div class="membership-section" id="membership-advisor-section"></div>
+        </aside>
       </div>
-    </div>
+    </main>
     <!--底部开始-->
     <footer class="footer" id="foot"></footer>
     <!--底部结束-->
@@ -163,28 +109,113 @@
       }, 50);
     </script>
     <script>
-      function loadItem() {
-        const pageNo = window.location.search.slice(1);
-        let start = 0;
-        let end = 20;
-        if (Number(pageNo)) {
-          start = (pageNo - 1) * 20;
-          end = pageNo * 20;
-        }
-        const parentNode = document.querySelector('.articleList');
-        membershipData.slice(start, end).forEach((item) => {
-          let liNode = document.createElement('membership-item');
-          liNode.setAttribute('data-name', item.name);
-          liNode.setAttribute('data-job', item.job);
-          liNode.setAttribute('data-time', item.time);
-          // liNode.setAttribute(
-          //   'data-href',
-          //   `/membership/detail.html?${item.id}`
-          // );
-          parentNode.querySelector('ul').appendChild(liNode);
-        });
+      const leadershipRoles = ['会长', '创始会长', '荣誉会长'];
+      const councilRoles = [
+        '名誉会长',
+        '特邀理事',
+        '监事委员会',
+        '常务副会长',
+        '财务部',
+        '秘书长',
+        '副秘书长',
+        '副会长',
+        '会长助理',
+        '理事',
+      ];
+      const advisorRoles = [
+        '高级顾问',
+        '政务顾问',
+        '商业顾问',
+        '法律顾问',
+        '教育顾问',
+        '特邀顾问',
+      ];
+
+      function membersForRole(role) {
+        return membershipData.filter((member) => member.job === role);
       }
-      loadItem();
+
+      function createMemberCard(member, role) {
+        const card = document.createElement('div');
+        card.className = 'member-card';
+
+        const name = document.createElement('span');
+        name.className = 'member-name';
+        name.textContent = member.name;
+        card.appendChild(name);
+
+        if (advisorRoles.includes(role)) {
+          const label = document.createElement('span');
+          label.className = 'advisor-role';
+          label.textContent = role;
+          card.appendChild(label);
+        }
+
+        return card;
+      }
+
+      function createMemberSection(role, members, isAdvisor) {
+        const section = document.createElement('section');
+        section.className = 'membership-section';
+
+        const heading = document.createElement('div');
+        heading.className = 'membership-section-heading';
+
+        const title = document.createElement('h2');
+        title.textContent = isAdvisor ? '商会顾问' : role;
+        heading.appendChild(title);
+
+        const count = document.createElement('span');
+        count.className = 'membership-count';
+        count.textContent = members.length;
+        heading.appendChild(count);
+        section.appendChild(heading);
+
+        const grid = document.createElement('div');
+        grid.className = isAdvisor
+          ? 'membership-grid advisor-grid'
+          : 'membership-grid';
+        members.forEach((member) => grid.appendChild(createMemberCard(member, member.job)));
+        section.appendChild(grid);
+
+        return section;
+      }
+
+      function renderMembership() {
+        const leadership = document.querySelector('#membership-leadership');
+        leadershipRoles.forEach((role) => {
+          const member = membersForRole(role)[0];
+          if (!member) return;
+
+          const card = document.createElement('article');
+          card.className = 'leadership-card';
+
+          const roleLabel = document.createElement('span');
+          roleLabel.className = 'leadership-role';
+          roleLabel.textContent = role;
+
+          const name = document.createElement('strong');
+          name.className = 'leadership-name';
+          name.textContent = member.name;
+
+          card.appendChild(roleLabel);
+          card.appendChild(name);
+          leadership.appendChild(card);
+        });
+
+        const groups = document.querySelector('#membership-groups');
+        councilRoles.forEach((role) => {
+          const members = membersForRole(role);
+          if (members.length) groups.appendChild(createMemberSection(role, members, false));
+        });
+
+        const advisors = advisorRoles.flatMap((role) => membersForRole(role));
+        document
+          .querySelector('#membership-advisor-section')
+          .replaceWith(createMemberSection('商会顾问', advisors, true));
+      }
+
+      renderMembership();
     </script>
     <script type="text/javascript" src="../ECMS_DGSJ/js/scrollbar.js"></script>
     <script
@@ -208,50 +239,5 @@
     </script>
     <script src="../ECMS_DGSJ/js/layout.js"></script>
     <script type="text/javascript" src="../ECMS_DGSJ/js/su_new.js"></script>
-    <script>
-      function initailPages() {
-        const pageno =
-          Number(window.location.search.slice(1)) > 0
-            ? Number(window.location.search.slice(1))
-            : 1;
-        const pageParentNode = document
-          .querySelector('.pages')
-          .querySelector('ul');
-        const spanNode = document.createElement('span');
-        spanNode.innerText = pageno;
-
-        const replaceNode = pageParentNode.querySelector(`#page${pageno}`);
-        const replaceParentNode = replaceNode.parentNode;
-
-        replaceParentNode.replaceChild(spanNode, replaceNode);
-        replaceParentNode.setAttribute('class', 'thisclass');
-
-        // pageParentNode
-        //   .querySelector('#prePage')
-        //   .setAttribute('href', `/membership/?${pageno - 1}`);
-        // pageParentNode
-        //   .querySelector('#nextPage')
-        //   .setAttribute('href', `/membership/?${pageno + 1}`);
-
-        // if (pageno == 1) {
-        //   pageParentNode.removeChild(
-        //     pageParentNode.querySelector('#firstPage').parentNode
-        //   );
-        //   pageParentNode.removeChild(
-        //     pageParentNode.querySelector('#prePage').parentNode
-        //   );
-        // }
-
-        // if (pageno == 3) {
-        //   pageParentNode.removeChild(
-        //     pageParentNode.querySelector('#nextPage').parentNode
-        //   );
-        //   pageParentNode.removeChild(
-        //     pageParentNode.querySelector('#tailPage').parentNode
-        //   );
-        // }
-      }
-      initailPages();
-    </script>
   </body>
 </html>
