@@ -1,0 +1,208 @@
+.membership-page {
+  --ccba-red: #e62430;
+  --ccba-green: #158b4b;
+  --ccba-orange: #ef7c24;
+  --ccba-ink: #25272b;
+  --ccba-muted: #747980;
+  --ccba-line: #e8e9eb;
+  --ccba-surface: #f7f8f7;
+  padding: 64px 20px 84px;
+  color: var(--ccba-ink);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(21, 139, 75, 0.06), transparent 26%),
+    radial-gradient(circle at 92% 22%, rgba(239, 124, 36, 0.07), transparent 24%),
+    #fff;
+}
+
+.membership-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.membership-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 44px;
+}
+
+.membership-kicker {
+  margin: 0 0 10px;
+  color: var(--ccba-red);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.membership-intro h1 {
+  margin: 0;
+  color: var(--ccba-ink);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.membership-intro-text {
+  max-width: 440px;
+  margin: 0;
+  color: var(--ccba-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.membership-leadership {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 54px;
+}
+
+.leadership-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 168px;
+  padding: 28px;
+  border: 1px solid var(--ccba-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 32px rgba(27, 31, 35, 0.06);
+}
+
+.leadership-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--card-color, var(--ccba-red));
+  content: '';
+}
+
+.leadership-card:nth-child(2) { --card-color: var(--ccba-green); }
+.leadership-card:nth-child(3) { --card-color: var(--ccba-orange); }
+
+.leadership-role {
+  display: block;
+  margin-bottom: 26px;
+  color: var(--ccba-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.leadership-name {
+  display: block;
+  color: var(--ccba-ink);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.membership-section {
+  margin-top: 42px;
+}
+
+.membership-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.membership-section-heading h2 {
+  margin: 0;
+  color: var(--ccba-ink);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.membership-count {
+  min-width: 28px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: var(--ccba-red);
+  background: rgba(230, 36, 48, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 14px 17px;
+  border: 1px solid var(--ccba-line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(230, 36, 48, 0.3);
+  box-shadow: 0 9px 24px rgba(27, 31, 35, 0.07);
+}
+
+.member-name {
+  color: #41454a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.membership-advisors {
+  margin-top: 60px;
+  padding: 32px;
+  border-radius: 20px;
+  background: var(--ccba-surface);
+}
+
+.membership-advisors .membership-section {
+  margin-top: 0;
+}
+
+.advisor-grid .member-card {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.advisor-role {
+  flex: 0 0 auto;
+  color: var(--ccba-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .membership-page { padding-top: 48px; }
+  .membership-intro { align-items: flex-start; flex-direction: column; }
+  .membership-leadership { grid-template-columns: 1fr; }
+  .leadership-card { min-height: 136px; }
+  .membership-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .membership-page { padding: 38px 16px 60px; }
+  .membership-intro { gap: 18px; margin-bottom: 30px; }
+  .membership-leadership { gap: 12px; margin-bottom: 40px; }
+  .leadership-card { min-height: 0; padding: 22px; }
+  .leadership-role { margin-bottom: 12px; }
+  .leadership-name { font-size: 24px; }
+  .membership-section { margin-top: 34px; }
+  .membership-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .member-card { min-height: 56px; padding: 12px 13px; }
+  .member-name { font-size: 15px; }
+  .membership-advisors { margin-top: 42px; padding: 22px 16px; }
+  .advisor-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 380px) {
+  .membership-grid { grid-template-columns: 1fr; }
+}
